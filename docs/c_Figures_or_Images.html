@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head><meta charset="UTF-8" />
+      
+      <title>Figures and images</title>
+      <link href="resources/base.css" rel="stylesheet" type="text/css" />
+      <meta content="Images are placed in topic content using the image element. The image element can stand alone, or can be contained within a figure (fig) element." name="description" />
+      <meta content="XMLmind DITA Converter 3.8.0" name="generator" />
+   <meta content="width=device-width, initial-scale=1" name="viewport" /><link href="_wh/wh.css" rel="stylesheet" type="text/css" /><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script><script charset="UTF-8" src="_wh/wh.js" type="text/javascript"></script><script charset="UTF-8" defer="defer" src="_wh/search.js" type="text/javascript"></script></head>
+   
+<body>
+    
+
+    <div id="wh-body">
+      <div class="wh-icon-menu" id="wh-menu"></div>
+      <div id="wh-navigation">
+        <ul id="wh-tabs">
+          <li id="wh-toc-tab"><a class="wh-icon-toc" href="#wh-toc-container"></a></li>
+          
+          <li id="wh-search-tab"><a class="wh-icon-search" href="#wh-search-container"></a></li>
+        </ul>
+        <div id="wh-toc-container">
+          <div id="wh-toc-form"><span class="wh-icon-collapse-all" id="wh-toc-collapse-all"></span><span class="wh-icon-expand-all" id="wh-toc-expand-all"></span><span class="wh-toc-spring"></span><span class="wh-icon-previous" id="wh-toc-previous"></span><span class="wh-icon-next" id="wh-toc-next"></span><span class="wh-toc-spring"></span><span class="wh-icon-print" id="wh-toc-print"></span></div>
+          <div id="wh-toc-pane">
+          </div>
+        </div>
+        
+        <div id="wh-search-container">
+          <div id="wh-search-form"><span id="wh-search-group"><span class="wh-icon-search" id="wh-do-search"></span><input id="wh-search-field" type="text" /><span class="wh-icon-cancel" id="wh-cancel-search"></span></span><span class="wh-icon-highlight" id="wh-search-highlight"></span></div>
+          <div id="wh-search-pane">
+            <div id="wh-search-results">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="wh-separator"></div>
+      <div id="wh-content">
+      
+      <section class="concept" id="D2978" lang="en" xml:lang="en">
+         <h2 class="section2-title" id="D2978____TT">Figures and images</h2>
+         <p class="shortdesc">Images are placed in topic content using the 
+            	 <span class="synph">image</span> element. The image element can stand alone, or can be
+            	 contained within a figure (<span class="synph">fig</span>) element. 
+            </p>
+         <div class="conbody">
+            <div class="p">Although images can be placed in a DITA topic as 
+               		<span class="synph">image</span> elements without a surrounding 
+               		<span class="synph">figure</span> element, figures are generally the best way to
+               		structure graphics and other illustrations. The exception is for simple inline
+               		images (that is, images that are part of the flow of the text), where an
+               		independent 
+               		<span class="synph">image</span> element should be used. 
+               	 </div>
+            <div class="p">Most commonly, images are stored is separate files external to DITA, but
+               		it is possible to embed XML-based image formats, such as 
+               		<dfn class="term">SVG</dfn>, within the DITA topic XML. 
+               	 </div>
+            <div class="p"><dfn class="term">Figures</dfn> in DITA are container elements typically comprising
+               		a 
+               		<span class="synph">title</span> element, an 
+               		<span class="synph">image</span> element, and a 
+               		<span class="synph">desc</span> element. 
+               	 </div>
+            <div class="p">The following example shows the DITA code for a typical figure. 
+               		
+               <pre class="codeblock">&lt;fig&gt;
+ &lt;title&gt;Charles Darwin&lt;/title&gt;
+ &lt;desc&gt;
+  &lt;cite&gt;Photo: Library of Congress, Prints &amp; Photographs
+  Division, [reproduction number, LC-USZ61-104]&lt;/cite&gt;
+ &lt;/desc&gt;
+ &lt;image placement=&quot;inline&quot; align=&quot;right&quot; width=&quot;208px&quot; height=&quot;320px&quot;
+  href=&quot;../images/darwin_library_of_congress.jpg&quot;&gt;
+  &lt;alt&gt;Photo of Charles Darwin: Library of Congress, Prints and
+  Photographs Division, [reproduction number, LC-USZ61-104]&lt;/alt&gt;
+ &lt;image&gt;
+&lt;/fig&gt;</pre> 
+               	 </div>
+            <div class="p">The 
+               		<span class="synph">title</span> element contains a short, descriptive title of the
+               		figure. The 
+               		<span class="synph">image</span> element's attributes contains the location,
+               		dimensions and placement of the image file, and a child 
+               		<span class="synph">alt</span> element containing an alternative text description of
+               		the image (for reading devices that don't display images or readers who don't
+               		see images). The 
+               		<span class="synph">desc</span> element contains further information about the image,
+               		including any photo credits or citations. 
+               	 </div>
+            <div class="p">Although the 
+               		<span class="synph">title</span> element appears before the 
+               		<span class="synph">img</span> element in DITA mark-up, the sequence can be altered
+               		in the output by modifying the publishing process. Do not break the semantics
+               		by using workarounds (such as moving the 
+               		<span class="synph">title</span> to 
+               		<span class="synph">figgroup</span> element after the 
+               		<span class="synph">img</span>) to achieve a formatting outcome. 
+               	 </div>
+            <div class="p">The sample figure DITA code might result in the following when
+               		transformed into XHTML. 
+               		
+               <figure class="fig" id="D2978__fig_9C377B1DB174464FA43E76B6C4760D7F">
+                  <figcaption class="fig-title">Example of a figure rendered in XHTML</figcaption>
+                  <div class="fig-contents">
+                     <div class="image-container" style="text-align: left;"><img alt="Example of a figure rendered in XHTML" class="image" height="441" id="D2978__image_144990A88AC2488DACEA0E7D5EDA0F4E" src="img/figure_example_result-3.png" width="341" /></div>
+                  </div>
+               </figure> 
+               	 </div>
+            <section class="section" id="D2978__section_B2DBA589D438488E84BE5B277E4C1833"> 
+               		
+               <h3 class="section-title">Rationale</h3> 
+               		
+               <div class="p">Answering a question about whether images should be placed directly
+                  		  (in a stepresult element) or in a figure structure: 
+                  		  
+                  <blockquote class="lq">
+                     <div>I'd say that
+                        			 if everything is working for you now, there is no need to change
+                        			 anything...doesn't seem like there is any tag abuse going on. &lt;fig&gt;, to
+                        			 my thinking, is to be used when you need to add a caption, description or other
+                        			 data to an &lt;image&gt;. Some groups prefer the practice of using
+                        			 &lt;image&gt; only for inline images and &lt;fig&gt; for all others, but unless
+                        			 you really need the additional data, I think &lt;fig&gt; is overkill. Your main
+                        			 concern is, if you are editing transforms, to make sure that you are
+                        			 accommodating both &lt;image&gt; and &lt;fig&gt; correctly. The default OT
+                        			 transforms already do this. As for &lt;ul&gt; vs. &lt;choices&gt;, while
+                        			 &lt;choices&gt; is the more semantically accurate tag for that kind of
+                        			 information, it is, after all, just a specialization of &lt;ul&gt;. So, if you
+                        			 do not find it a problem that your choices are not absolutely semantically
+                        			 tagged as such, then there's no functional reason to change it. 
+                        		  
+                        <p class="lq-reftitle"><a href="http://tech.groups.yahoo.com/group/dita-users/message/17506" target="_blank">Leigh White, Yahoo! DITA Users Group</a></p>
+                     </div>
+                  </blockquote> 
+                  		</div> 
+               	 </section>
+         </div>
+      </section>
+   </div>
+    </div>
+
+    
+  </body></html>

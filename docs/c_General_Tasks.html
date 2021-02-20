@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head><meta charset="UTF-8" />
+      
+      <title>General Task</title>
+      <link href="resources/base.css" rel="stylesheet" type="text/css" />
+      <meta content="The general task information type was introduced in DITA 1.2 as a less prescriptive alternative to the task (or strict task) information type." name="description" />
+      <meta content="XMLmind DITA Converter 3.8.0" name="generator" />
+   <meta content="width=device-width, initial-scale=1" name="viewport" /><link href="_wh/wh.css" rel="stylesheet" type="text/css" /><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script><script charset="UTF-8" src="_wh/wh.js" type="text/javascript"></script><script charset="UTF-8" defer="defer" src="_wh/search.js" type="text/javascript"></script></head>
+   
+<body>
+    
+
+    <div id="wh-body">
+      <div class="wh-icon-menu" id="wh-menu"></div>
+      <div id="wh-navigation">
+        <ul id="wh-tabs">
+          <li id="wh-toc-tab"><a class="wh-icon-toc" href="#wh-toc-container"></a></li>
+          
+          <li id="wh-search-tab"><a class="wh-icon-search" href="#wh-search-container"></a></li>
+        </ul>
+        <div id="wh-toc-container">
+          <div id="wh-toc-form"><span class="wh-icon-collapse-all" id="wh-toc-collapse-all"></span><span class="wh-icon-expand-all" id="wh-toc-expand-all"></span><span class="wh-toc-spring"></span><span class="wh-icon-previous" id="wh-toc-previous"></span><span class="wh-icon-next" id="wh-toc-next"></span><span class="wh-toc-spring"></span><span class="wh-icon-print" id="wh-toc-print"></span></div>
+          <div id="wh-toc-pane">
+          </div>
+        </div>
+        
+        <div id="wh-search-container">
+          <div id="wh-search-form"><span id="wh-search-group"><span class="wh-icon-search" id="wh-do-search"></span><input id="wh-search-field" type="text" /><span class="wh-icon-cancel" id="wh-cancel-search"></span></span><span class="wh-icon-highlight" id="wh-search-highlight"></span></div>
+          <div id="wh-search-pane">
+            <div id="wh-search-results">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="wh-separator"></div>
+      <div id="wh-content">
+      
+      <section class="concept" id="concept_411EB14DCE0C400E8C21C1A15E5B0926" lang="en" xml:lang="en">
+         <h2 class="section4-title">General Task</h2>
+         <p class="shortdesc">The 
+            	 <dfn class="term">general task</dfn> information type was introduced in 
+            	 <span class="ph">DITA 1.2</span>
+            	 as a less prescriptive alternative to the task (or 
+            	 <dfn class="term">strict task</dfn>) information type. 
+            </p>
+         <div class="conbody">
+            <div class="p">In <span class="ph">DITA 1.2</span>, the task information type was separated into
+               				<dfn class="term">general task</dfn> and <dfn class="term">strict task</dfn>. Technically speaking, the
+               				<dfn class="term">general task</dfn> is now the base task information type, because strict type
+               			is implemented as a <dfn class="term">constrained</dfn> version of general task. 
+               <figure class="fig" id="concept_411EB14DCE0C400E8C21C1A15E5B0926__fig_AF763BA16CB44B62A59E207459E2C26B">
+                  <figcaption class="fig-title">Task information types in base <span class="ph">DITA 1.2</span></figcaption>
+                  <div class="fig-contents">
+                     <div class="image-container" style="text-align: left;"><img alt="Schematic diagram showing general and strict task in base content model in DITA 1.2" class="image" height="144" id="concept_411EB14DCE0C400E8C21C1A15E5B0926__image_0AD410FD898A4AA4B7620590EC77E878" src="img/information_types_taskmodel-3.svg" width="303" /></div>
+                  </div>
+               </figure>
+               		</div>
+            <div class="p">For documenting most procedures, the 
+               		<dfn class="term">strict task</dfn> is the more appropriate choice. Conceptually, it
+               		is best to think of the 
+               		<dfn class="term">task</dfn> information type as meaning 
+               		<dfn class="term">strict task</dfn>. The 
+               		<dfn class="term">strict task</dfn> information type is the equivalent of the 
+               		<span class="ph">DITA 1.1</span>
+               		
+               		<dfn class="term">task</dfn>, while the general task has much more relaxed content
+               		rules. 
+               	 </div>
+            <div class="p">Wherever possible, you should prefer the 
+               		<dfn class="term">strict task</dfn>. If your 
+               		<span class="ph">organisation's</span>
+               		content model is more appropriately served by general task, then stick to
+               		general task across the document repository. Avoid mixing 
+               		<dfn class="term">strict task</dfn> and 
+               		<dfn class="term">general task</dfn> in the same publication. 
+               	 </div>
+            <div class="p"><span class="ph">DITA 1.2</span> introduces the General Task Model as an alternative
+               			to the <span class="ph">DITA 1.0</span> and 1.1 Strict Task Model. It also adds
+               			capabilities to the &lt;steps&gt; content unit for both task models. </div>
+            <div class="p">Use the DITA General Task Model when your information model calls for a task structure
+               			that is not well supported by the DITA Strict Task Model or when you need to constrain
+               			the elements in a task in a way that is unique to your organization’s needs. Use
+               the
+               			DITA General Task Model to convert existing tasks to DITA that do not yet conform
+               to
+               			your task information model. </div>
+            <div class="p"><span class="ph">DITA 1.2</span> also includes the new Machinery Task Model,
+               			designed to conform to the requirements of the machine industry, especially in
+               the
+               			construction of pre- and post-requirements. </div>
+            <div class="p">The new DITA General Task Model allows the following: </div>
+            <ul class="ul" id="concept_411EB14DCE0C400E8C21C1A15E5B0926__ul_ikd_22d_s4b">
+               <li class="li">Add a &lt;section&gt; with an optional &lt;title&gt; before the steps in the task. </li>
+               <li class="li">Vary the order of &lt;prereq&gt;, &lt;context&gt;, and &lt;section&gt; before the
+                  				steps in the task. It's common for some organizations to present &lt;context&gt;
+                  				information before &lt;prereq&gt;, and, in the past, the DITA-OT stylesheets had to
+                  				be customized to switch them around, which is beyond the capability of most users
+                  				who are not well-versed in advanced XSLT coding techniques. </li>
+               <li class="li">Select the new &lt;steps-informal&gt; content unit, which allows you to construct
+                  				steps using ordered and unordered lists, paragraphs, and other less semantically
+                  				specified elements than &lt;step&gt; and &lt;cmd&gt;. </li>
+               <li class="li">Include more than one example or pre-requisite in a task after the completion of the
+                  				steps. </li>
+            </ul>
+         </div>
+      </section>
+   </div>
+    </div>
+
+    
+  </body></html>

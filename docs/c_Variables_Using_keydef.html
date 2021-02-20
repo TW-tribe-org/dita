@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head><meta charset="UTF-8" />
+      
+      <title>Variables using indirection</title>
+      <link href="resources/base.css" rel="stylesheet" type="text/css" />
+      <meta content="The keyword element can be used as a container for variable words and phrases, when used in conjunction with the keydef element in the ditamap. Rather than enter the value of the keyword directly into the element, you can indirectly reference it through a key." name="description" />
+      <meta content="XMLmind DITA Converter 3.8.0" name="generator" />
+   <meta content="width=device-width, initial-scale=1" name="viewport" /><link href="_wh/wh.css" rel="stylesheet" type="text/css" /><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script><script charset="UTF-8" src="_wh/wh.js" type="text/javascript"></script><script charset="UTF-8" defer="defer" src="_wh/search.js" type="text/javascript"></script></head>
+   
+<body>
+    
+
+    <div id="wh-body">
+      <div class="wh-icon-menu" id="wh-menu"></div>
+      <div id="wh-navigation">
+        <ul id="wh-tabs">
+          <li id="wh-toc-tab"><a class="wh-icon-toc" href="#wh-toc-container"></a></li>
+          
+          <li id="wh-search-tab"><a class="wh-icon-search" href="#wh-search-container"></a></li>
+        </ul>
+        <div id="wh-toc-container">
+          <div id="wh-toc-form"><span class="wh-icon-collapse-all" id="wh-toc-collapse-all"></span><span class="wh-icon-expand-all" id="wh-toc-expand-all"></span><span class="wh-toc-spring"></span><span class="wh-icon-previous" id="wh-toc-previous"></span><span class="wh-icon-next" id="wh-toc-next"></span><span class="wh-toc-spring"></span><span class="wh-icon-print" id="wh-toc-print"></span></div>
+          <div id="wh-toc-pane">
+          </div>
+        </div>
+        
+        <div id="wh-search-container">
+          <div id="wh-search-form"><span id="wh-search-group"><span class="wh-icon-search" id="wh-do-search"></span><input id="wh-search-field" type="text" /><span class="wh-icon-cancel" id="wh-cancel-search"></span></span><span class="wh-icon-highlight" id="wh-search-highlight"></span></div>
+          <div id="wh-search-pane">
+            <div id="wh-search-results">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="wh-separator"></div>
+      <div id="wh-content">
+      
+      <section class="concept" id="concept_7016766027BF414AAC785D0B409FE71E" lang="en" xml:lang="en">
+         <h2 class="section3-title" id="concept_7016766027BF414AAC785D0B409FE71E____TT">Variables using indirection</h2>
+         <p class="shortdesc">The 
+            	 <span class="synph">keyword</span> element can be used as a container for variable
+            	 words and phrases, when used in conjunction with the 
+            	 <span class="synph">keydef</span> element in the ditamap. Rather than enter the value
+            	 of the keyword directly into the element, you can indirectly reference it
+            	 through a 
+            	 <dfn class="term">key</dfn>. 
+            </p>
+         <div class="conbody">
+            <div class="p">The 
+               		<span class="synph">keyref</span> feature introduced in 
+               		<span class="ph">DITA 1.2</span>
+               		allows re-used terms or phrases that often vary according to output publication
+               		to be managed more easily. You can collect such 
+               		<dfn class="term">variable</dfn> terms into a 
+               		<span class="synph">keydef</span> section in the ditamap, and then use the 
+               		<span class="synph">keyword</span> and its 
+               		<span class="synph">keyref</span> attribute to re-use them. You must also nominate a 
+               		<dfn class="term">fallback</dfn> value, in case the relevant key is not defined in
+               		any ditamap in which the topic is referenced. 
+               	 </div>
+            <div class="p">Because the content model of the 
+               		<span class="synph">keyword</span> element in a ditamap is different to that in a
+               		topic, you have to contain the ditamap keyword element within 
+               		<span class="synph">topicmeta</span> and 
+               		<span class="synph">keywords</span> elements. 
+               	 </div>
+            <div class="p">As a simple example, a generic car component topic can include the name
+               		of the specific car in whose manual the topic appears. A sentence in the
+               		generic topic may be: 
+               		
+               <pre class="codeblock">Your &lt;keyword keyref=&quot;car_name&quot;&gt;car&lt;keyword&gt; has high intensity discharge headlamps.</pre>If that topic is included in a ditamap with a key defined as: 
+               		
+               <pre class="codeblock">&lt;keydef keys=&quot;car_name&quot;&gt;
+  &lt;topicmeta&gt;&lt;keywords&gt;&lt;keyword&gt;Liberty&lt;/keyword&gt;&lt;/keywords&gt;&lt;/topicmeta&gt;
+&lt;/keydef&gt;</pre> the topic will be rendered as: 
+               		
+               <pre class="codeblock">Your Liberty has high intensity discharge headlamps.</pre> 
+               	 </div>
+            <div class="p">In this example, if the ditamap didn't have a definition for the 
+               		<kbd class="userinput">car_name</kbd> key, the word 
+               		<q class="q">car</q>, which is the value of the 
+               		<span class="synph">keyword</span> element in the topic, would be used in the output.
+               		
+               	 </div>
+            <div class="note">
+               <h5 class="note-head">Note</h5>
+               <div class="note-body">You may find it easier to manage keys in the ditamap if you use a
+                  		separate, nested ditamap to contain the keys only. 
+                  	 </div>
+            </div>
+            <section class="example" id="concept_7016766027BF414AAC785D0B409FE71E__example_A9AC090DA0C24201B63D6553AB6F5C93">
+               			
+               <h3 class="example-title">Example of keydef variable code for testing</h3>
+               			
+               <div class="p">The <span class="keyword">Liberty</span> is a family vehicle available as
+                  				a sedan or station wagon. </div>
+               			
+               <div class="p">To see the result of this construct in output, you must set, in the ditamap, a
+                  					<span class="synph">keydef</span> with a <span class="synph">keys</span> attribute of
+                  					<kbd class="userinput">product_name</kbd> with a <span class="synph">keyword</span> value of
+                  					<kbd class="userinput">Legacy</kbd>. If there is no keyword in the ditamap, the
+                  				rendered result will revert to <samp class="systemoutput">Liberty</samp>. </div>
+               		</section>
+         </div>
+      </section>
+   </div>
+    </div>
+
+    
+  </body></html>

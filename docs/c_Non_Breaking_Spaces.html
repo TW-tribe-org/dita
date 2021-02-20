@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head><meta charset="UTF-8" />
+      
+      <title>Non-breaking spaces and special characters</title>
+      <link href="resources/base.css" rel="stylesheet" type="text/css" />
+      <meta content="Special characters may be inserted into DITA content using Unicode character escapes." name="description" />
+      <meta content="XMLmind DITA Converter 3.8.0" name="generator" />
+   <meta content="width=device-width, initial-scale=1" name="viewport" /><link href="_wh/wh.css" rel="stylesheet" type="text/css" /><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script><script charset="UTF-8" src="_wh/wh.js" type="text/javascript"></script><script charset="UTF-8" defer="defer" src="_wh/search.js" type="text/javascript"></script></head>
+   
+<body>
+    
+
+    <div id="wh-body">
+      <div class="wh-icon-menu" id="wh-menu"></div>
+      <div id="wh-navigation">
+        <ul id="wh-tabs">
+          <li id="wh-toc-tab"><a class="wh-icon-toc" href="#wh-toc-container"></a></li>
+          
+          <li id="wh-search-tab"><a class="wh-icon-search" href="#wh-search-container"></a></li>
+        </ul>
+        <div id="wh-toc-container">
+          <div id="wh-toc-form"><span class="wh-icon-collapse-all" id="wh-toc-collapse-all"></span><span class="wh-icon-expand-all" id="wh-toc-expand-all"></span><span class="wh-toc-spring"></span><span class="wh-icon-previous" id="wh-toc-previous"></span><span class="wh-icon-next" id="wh-toc-next"></span><span class="wh-toc-spring"></span><span class="wh-icon-print" id="wh-toc-print"></span></div>
+          <div id="wh-toc-pane">
+          </div>
+        </div>
+        
+        <div id="wh-search-container">
+          <div id="wh-search-form"><span id="wh-search-group"><span class="wh-icon-search" id="wh-do-search"></span><input id="wh-search-field" type="text" /><span class="wh-icon-cancel" id="wh-cancel-search"></span></span><span class="wh-icon-highlight" id="wh-search-highlight"></span></div>
+          <div id="wh-search-pane">
+            <div id="wh-search-results">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="wh-separator"></div>
+      <div id="wh-content">
+      
+      <section class="concept" id="D9202" lang="en" xml:lang="en">
+         <h2 class="section3-title" id="D9202____TT">Non-breaking spaces and special characters</h2>
+         <p class="shortdesc">Special characters may be inserted into DITA content using Unicode
+            	 character escapes. 
+            </p>
+         <div class="conbody">
+            <div class="p">Your authoring tool may allow the insertion of non-breaking spaces
+               		between words. Non-breaking spaces are intended for use when the separation of
+               		two adjacent words through line wrapping will result in a loss of meaning or
+               		legibility. For example, some authors prefer values and their units, such as 
+               		<q class="q">12 kg</q>, to be treated as a single word. 
+               	 </div>
+            <div class="p">Likewise, soft hyphens are intended for use when there is a preferred
+               		point for the breaking of a word during line wrapping. 
+               	 </div>
+            <div class="p">Some mark-up languages support 
+               		<dfn class="term">entities</dfn>, which allow special characters (not included in
+               		the standard character set or not associated with keyboard keys) to be defined
+               		using a memorable shortcut. For example, HTML has a 
+               		<code class="codeph">&amp;nbsp;</code> entity for non-breaking spaces. Regardless,
+               		provided a character is included in the relevant Unicode character set, it can
+               		be included in XML-based content using hexadecimal 
+               		<dfn class="term">numeric character references</dfn>, or 
+               		<dfn class="term">character escapes</dfn>. 
+               	 </div>
+            <div class="p">Although XML supports entities, the DITA standard itself does not define
+               		any text entities. Nonetheless, character escapes can be used. The character
+               		escapes for commonly used special characters is: 
+               	 
+               <dl class="dl">
+                  <dt class="dt">non-breaking space 
+                     		  </dt>
+                  <dd class="dd"><code class="codeph">&amp;#xA0;</code> 
+                     		  </dd>
+                  <dt class="dt">soft hyphen 
+                     		  </dt>
+                  <dd class="dd"><code class="codeph">&amp;#xAD;</code> 
+                     		  </dd>
+                  <dt class="dt">micro symbol 
+                     		  </dt>
+                  <dd class="dd"><code class="codeph">&amp;#xB5;</code> 
+                     		  </dd>
+                  <dt class="dt">division symbol 
+                     		  </dt>
+                  <dd class="dd"><code class="codeph">&amp;#x247;</code> 
+                     		  </dd>
+                  <dt class="dt">non-breaking hyphen</dt>
+                  <dd class="dd"><code class="codeph">&amp;#x2011</code></dd>
+                  <dt class="dt">en dash 
+                     		  </dt>
+                  <dd class="dd"><code class="codeph">&amp;#x2013;</code> 
+                     		  </dd>
+                  <dt class="dt">em dash 
+                     		  </dt>
+                  <dd class="dd"><code class="codeph">&amp;#x2014;</code> 
+                     		  </dd>
+                  <dt class="dt">ellipsis 
+                     		  </dt>
+                  <dd class="dd"><code class="codeph">&amp;#x2026;</code> 
+                     		  </dd>
+               </dl> 
+               	 </div>
+            <section class="section" id="D9202__section_9C64586E07D64D4785536EE4EB0E3D5D"> 
+               		
+               <h3 class="section-title">Rationale</h3> 
+               		
+               <blockquote class="lq">
+                  <div>To
+                     		  align some of the code and make sure it stays in place, writers are using the
+                     		  non-breaking space. Our content management system is storing these characters
+                     		  as &amp;nbsp; characters. When exported back to FrameMaker, they reconvert to
+                     		  non-breaking spaces. However, when I opened these in a different DITA editor to
+                     		  look at them, the non-breaking spaces didn't exist, they were converted to
+                     		  plain spaces. I can't find anything in the DITA spec that talks about
+                     		  non-breaking spaces, is there any real standard in DITA? It's not a DITA
+                     		  feature, it's a Unicode feature (remembering that all XML documents are, by
+                     		  definition, Unicode documents). Unicode defines a character \u00A0, which is a
+                     		  non-breaking space. This character can be entered in any XML document using the
+                     		  numeric character reference &amp;#xA0;. However, many XML processors or editors
+                     		  may normalize &amp;#xA0; into a regular space. The syntax you show,
+                     		  &quot;&amp;nbsp;&quot; is an XML text entity. The DITA standard does not define any text
+                     		  entities (because DITA does not require the use of DTDs, in which such entities
+                     		  are declared). However, within a given XML document (of any type), you can
+                     		  declare the entity yourself, e.g.: &lt;!DOCTYPE topic PUBLIC
+                     		  &quot;http://example.com/doctypes/mytopicshell&quot; &quot;topic.dtd&quot; [ &lt;!ENTITY nbsp
+                     		  &quot;&amp;#xa0;&quot; &gt; ]&gt;
+                     		  &lt;topic&gt;&lt;title&gt;Don't&amp;nbsp;Break&amp;nbsp;Me&lt;/title&gt;&lt;/topic&gt;
+                     		  
+                     		
+                     <p class="lq-reftitle">Eliot Kimber responding to Wayne Brisette, Yahoo! DITA Users Group</p>
+                  </div>
+               </blockquote> 
+               		
+               <blockquote class="lq">
+                  <div>
+                     				
+                     <div class="p">An autobiography I am editing contains correspondence from which several
+                        					paragraphs have (intentionally) been omitted. Any advice on the best way to
+                        					indicate that these paragraphs have been omitted? I would have thought ellipses
+                        					were appropriate, but they look rather odd and lonely in-between paragraphs.
+                        If
+                        					ellipses are appropriate, where should they be placed? </div>
+                     				
+                     <div class="p">My response: </div>
+                     				
+                     <div class="p">Details on using ellipses are on p110 of the 6th edition of the Australian Style
+                        					Manual for authors editors and printers. In essence, yes you can use them to
+                        					show omissions. The format is [text] [space] ... [space] [text]. </div>
+                     			
+                     <p class="lq-reftitle"><a href="https://cybertext.wordpress.com/2008/12/30/ellipses-for-missing-text/" target="_blank">Rhonda Bracey, Cybertext Blog</a></p>
+                  </div>
+               </blockquote> 
+               	 </section>
+         </div>
+      </section>
+   </div>
+    </div>
+
+    
+  </body></html>

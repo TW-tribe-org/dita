@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head><meta charset="UTF-8" />
+      
+      <title>Relationship tables</title>
+      <link href="resources/base.css" rel="stylesheet" type="text/css" />
+      <meta content="Relationship tables are used to store linking relationships between topics in a collection in the ditamap, rather than in individual topics. Linking relationships are defined in a table-like structure, with rows in the table determining which topics are linked to which." name="description" />
+      <meta content="XMLmind DITA Converter 3.8.0" name="generator" />
+   <meta content="width=device-width, initial-scale=1" name="viewport" /><link href="_wh/wh.css" rel="stylesheet" type="text/css" /><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script><script charset="UTF-8" src="_wh/wh.js" type="text/javascript"></script><script charset="UTF-8" defer="defer" src="_wh/search.js" type="text/javascript"></script></head>
+   
+<body>
+    
+
+    <div id="wh-body">
+      <div class="wh-icon-menu" id="wh-menu"></div>
+      <div id="wh-navigation">
+        <ul id="wh-tabs">
+          <li id="wh-toc-tab"><a class="wh-icon-toc" href="#wh-toc-container"></a></li>
+          
+          <li id="wh-search-tab"><a class="wh-icon-search" href="#wh-search-container"></a></li>
+        </ul>
+        <div id="wh-toc-container">
+          <div id="wh-toc-form"><span class="wh-icon-collapse-all" id="wh-toc-collapse-all"></span><span class="wh-icon-expand-all" id="wh-toc-expand-all"></span><span class="wh-toc-spring"></span><span class="wh-icon-previous" id="wh-toc-previous"></span><span class="wh-icon-next" id="wh-toc-next"></span><span class="wh-toc-spring"></span><span class="wh-icon-print" id="wh-toc-print"></span></div>
+          <div id="wh-toc-pane">
+          </div>
+        </div>
+        
+        <div id="wh-search-container">
+          <div id="wh-search-form"><span id="wh-search-group"><span class="wh-icon-search" id="wh-do-search"></span><input id="wh-search-field" type="text" /><span class="wh-icon-cancel" id="wh-cancel-search"></span></span><span class="wh-icon-highlight" id="wh-search-highlight"></span></div>
+          <div id="wh-search-pane">
+            <div id="wh-search-results">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="wh-separator"></div>
+      <div id="wh-content">
+      
+      <section class="concept" id="D2068" lang="en" xml:lang="en">
+         <h2 class="section2-title" id="D2068____TT">Relationship tables</h2>
+         <p class="shortdesc">Relationship tables are used to store linking relationships
+            	 between topics in a collection in the ditamap, rather than in individual
+            	 topics. Linking relationships are defined in a table-like structure, with rows
+            	 in the table determining which topics are linked to which. 
+            </p>
+         <div class="conbody">
+            <div class="p">Automated links based on non-hierarchical relationships are made
+               		possible through 
+               		<dfn class="term">relationship tables</dfn> (or 
+               		<dfn class="term">reltables</dfn>). 
+               	 </div>
+            <div class="p">The coding for a 
+               		<span class="synph">reltable</span> element within a ditamap is similar to that for a
+               		table within a topic. It is common for a reltable to have three columns: one
+               		for concept topics, one for task topics, and one for reference topics.
+               		Relationships between topics of the three information types are specified in
+               		the reltable rows. 
+               	 </div>
+            <div class="p">For example, you may 
+               		<span class="ph">visualise</span>
+               		the following reltable to associate the concept topic 
+               		<code class="filepath">c.dita</code> (<q class="q">About Produce</q>) with the task
+               		topic<code class="filepath"> t.dita</code> (<q class="q">Choosing Produce</q>) and the reference
+               		topic 
+               		<code class="filepath">r.dita</code> (<q class="q">Available Produce</q>): 
+               	 </div>
+            <div class="table" id="D2068__table_16BFCDBED68F4C2D8D50D1E121A64E04">
+               <table border="1" class="tgroup">
+                  <colgroup class="colspec"></colgroup>
+                  <colgroup class="colspec"></colgroup>
+                  <colgroup class="colspec"></colgroup>
+                  <tbody class="tbody">
+                     <tr class="row">
+                        <td class="entry" style="text-align: left;vertical-align: top;">c.dita 
+                           				</td>
+                        <td class="entry" style="text-align: left;vertical-align: top;">t.dita 
+                           				</td>
+                        <td class="entry" style="text-align: left;vertical-align: top;">r.dita 
+                           				</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+            <div class="p">Such a reltable would generate the following links on the 
+               		<q class="q">Available Produce</q> reference topic: 
+               	 </div>
+            <figure class="fig" id="D2068__fig_758AA1A7BC044B6890FF7485A22D989F">
+               <figcaption class="fig-title">Example of automatically-generated links</figcaption>
+               <div class="fig-contents">
+                  <div class="image-container" style="text-align: left;"><img alt="Example of automatically-generated links in HTML output" class="image" height="113" id="D2068__image_9F893A218BDA44F89E256756861B45AF" src="img/generated_links_example1-3.gif" width="180" /></div>
+               </div>
+            </figure>
+            <div class="p">By manipulating the linking characteristics of the 
+               		<span class="synph">topicref</span> elements in the reltable, you can finely tune the
+               		way links are generated. 
+               	 </div>
+            <div class="p">Relationship tables can technically contain nested 
+               		<span class="synph">topicref</span> elements (that form a hierarchy) within a 
+               		<span class="synph">relcell</span>. However, you should avoid using this sort of
+               		construct. 
+               	 </div>
+            <section class="section" id="D2068__section_135C6A6267E84DD1B28062F04475D52E"> 
+               		
+               <h3 class="section-title">References</h3> 
+               		
+               <div class="p"> 
+                  		  <a class="xref" href="http://www.infomanagementcenter.com/enewsletter/200511/second.htm" target="_blank">Linking DITA Topics Through Relationship
+                     			 Tables</a>, by Kylene Bruski. 
+                  		</div> 
+               	 </section>
+         </div>
+      </section>
+   </div>
+    </div>
+
+    
+  </body></html>

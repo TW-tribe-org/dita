@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head><meta charset="UTF-8" />
+      
+      <title>Linking in a new window</title>
+      <link href="resources/base.css" rel="stylesheet" type="text/css" />
+      <meta content="The scope attribute of the cross-reference (xref) is used to nominate whether the target topic, file or other resource is external to the DITA source topics. Some publishing tools (such as the DITA Open Toolkit) will generate cross-references with an external scope attribute as hyperlinks that will open the target in a new window." name="description" />
+      <meta content="XMLmind DITA Converter 3.8.0" name="generator" />
+   <meta content="width=device-width, initial-scale=1" name="viewport" /><link href="_wh/wh.css" rel="stylesheet" type="text/css" /><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script><script charset="UTF-8" src="_wh/wh.js" type="text/javascript"></script><script charset="UTF-8" defer="defer" src="_wh/search.js" type="text/javascript"></script></head>
+   
+<body>
+    
+
+    <div id="wh-body">
+      <div class="wh-icon-menu" id="wh-menu"></div>
+      <div id="wh-navigation">
+        <ul id="wh-tabs">
+          <li id="wh-toc-tab"><a class="wh-icon-toc" href="#wh-toc-container"></a></li>
+          
+          <li id="wh-search-tab"><a class="wh-icon-search" href="#wh-search-container"></a></li>
+        </ul>
+        <div id="wh-toc-container">
+          <div id="wh-toc-form"><span class="wh-icon-collapse-all" id="wh-toc-collapse-all"></span><span class="wh-icon-expand-all" id="wh-toc-expand-all"></span><span class="wh-toc-spring"></span><span class="wh-icon-previous" id="wh-toc-previous"></span><span class="wh-icon-next" id="wh-toc-next"></span><span class="wh-toc-spring"></span><span class="wh-icon-print" id="wh-toc-print"></span></div>
+          <div id="wh-toc-pane">
+          </div>
+        </div>
+        
+        <div id="wh-search-container">
+          <div id="wh-search-form"><span id="wh-search-group"><span class="wh-icon-search" id="wh-do-search"></span><input id="wh-search-field" type="text" /><span class="wh-icon-cancel" id="wh-cancel-search"></span></span><span class="wh-icon-highlight" id="wh-search-highlight"></span></div>
+          <div id="wh-search-pane">
+            <div id="wh-search-results">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="wh-separator"></div>
+      <div id="wh-content">
+      
+      <section class="concept" id="D5135" lang="en" xml:lang="en">
+         <h2 class="section3-title" id="D5135____TT">Linking in a new window</h2>
+         <p class="shortdesc">The 
+            	 <span class="synph">scope</span> attribute of the cross-reference (<span class="synph">xref</span>)
+            	 is used to nominate whether the target topic, file or other resource is
+            	 external to the DITA source topics. Some publishing tools (such as the DITA
+            	 Open Toolkit) will generate cross-references with an 
+            	 <kbd class="userinput">external</kbd> scope attribute as hyperlinks that will
+            	 open the target in a new window. 
+            </p>
+         <div class="conbody">
+            <div class="p">If a topic being referenced in an 
+               		<dfn class="term">xref</dfn> is external to the document content, the 
+               		<span class="synph">xref</span> element's 
+               		<span class="synph">scope</span> attribute should be set to 
+               		<kbd class="userinput">external</kbd> to semantically identify this
+               		relationship. 
+               	 </div>
+            <div class="p">If you want a cross-referenced Web or external
+               		resource to open in a new window, code the 
+               		<span class="synph">xref</span> as in the example: 
+               		
+               <pre class="codeblock">&lt;xref href=&quot;..../somefile.html&quot; format=&quot;html&quot; scope=&quot;external&quot; /&gt;</pre> 
+               	 </div>
+            <div class="note">
+               <h5 class="note-head">Note</h5>
+               <div class="note-body">Opening external target resources in a new window is a processing
+                  		function, and is therefore dependent upon the publishing tool used and its
+                  		configuration. This 
+                  		<span class="ph">behaviour</span>
+                  		is not part of the DITA standard itself. 
+                  	 </div>
+            </div>
+         </div>
+      </section>
+   </div>
+    </div>
+
+    
+  </body></html>

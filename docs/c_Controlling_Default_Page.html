@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head><meta charset="UTF-8" />
+      
+      <title>Controlling the top node (default topic)</title>
+      <link href="resources/base.css" rel="stylesheet" type="text/css" />
+      <meta content="DITA publishing tools sometimes process the hierarchy of a ditamap slightly differently for different target output formats. A workaround can be used to achieve greater consistency between different outputs to avoid confusing readers." name="description" />
+      <meta content="XMLmind DITA Converter 3.8.0" name="generator" />
+   <meta content="width=device-width, initial-scale=1" name="viewport" /><link href="_wh/wh.css" rel="stylesheet" type="text/css" /><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script><script charset="UTF-8" src="_wh/wh.js" type="text/javascript"></script><script charset="UTF-8" defer="defer" src="_wh/search.js" type="text/javascript"></script></head>
+   
+<body>
+    
+
+    <div id="wh-body">
+      <div class="wh-icon-menu" id="wh-menu"></div>
+      <div id="wh-navigation">
+        <ul id="wh-tabs">
+          <li id="wh-toc-tab"><a class="wh-icon-toc" href="#wh-toc-container"></a></li>
+          
+          <li id="wh-search-tab"><a class="wh-icon-search" href="#wh-search-container"></a></li>
+        </ul>
+        <div id="wh-toc-container">
+          <div id="wh-toc-form"><span class="wh-icon-collapse-all" id="wh-toc-collapse-all"></span><span class="wh-icon-expand-all" id="wh-toc-expand-all"></span><span class="wh-toc-spring"></span><span class="wh-icon-previous" id="wh-toc-previous"></span><span class="wh-icon-next" id="wh-toc-next"></span><span class="wh-toc-spring"></span><span class="wh-icon-print" id="wh-toc-print"></span></div>
+          <div id="wh-toc-pane">
+          </div>
+        </div>
+        
+        <div id="wh-search-container">
+          <div id="wh-search-form"><span id="wh-search-group"><span class="wh-icon-search" id="wh-do-search"></span><input id="wh-search-field" type="text" /><span class="wh-icon-cancel" id="wh-cancel-search"></span></span><span class="wh-icon-highlight" id="wh-search-highlight"></span></div>
+          <div id="wh-search-pane">
+            <div id="wh-search-results">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="wh-separator"></div>
+      <div id="wh-content">
+      
+      <section class="concept" id="Dc_Controlling_Default_Page" lang="en" xml:lang="en">
+         <h2 class="section3-title" id="Dc_Controlling_Default_Page____TT">Controlling the top node (default topic)</h2>
+         <p class="shortdesc">DITA publishing tools sometimes process the hierarchy of a ditamap
+            	 slightly differently for different target output formats. A workaround can be
+            	 used to achieve greater consistency between different outputs to avoid
+            	 confusing readers. 
+            </p>
+         <div class="conbody">
+            <div class="p">When a ditamap file is processed into a Help format, the first topic in
+               		the ditamap hierarchy becomes the first (or default) topic displayed. In some
+               		Help outputs, it also becomes the topic displayed when the 
+               		<b class="uicontrol">Home</b> button in the tri-pane navigation panel is
+               		selected. 
+               	 </div>
+            <div class="p">Some Help formats allow for the nomination of a topic other than the
+               		first topic as the default page, and perhaps yet another topic as the 
+               		<dfn class="term">Home topic</dfn>. DITA currently has no facility to record such an
+               		alternative 
+               		<dfn class="term">Home topic</dfn> in the ditamap. 
+               	 </div>
+            <div class="p">In 
+               		<span class="keyword">Eclipse Help</span> outputs, the 
+               		<dfn class="term">TOC</dfn> generated from the ditamap includes the 
+               		<span class="synph">map</span> element as its top node. This can cause some confusion
+               		to the user, because the title highlighted in the TOC is different from the
+               		title of the displayed topic. 
+               	 </div>
+            <div class="p">In the first example following, an 
+               		<span class="keyword">Eclipse Help</span> system is displaying an information set
+               		using the collection's home address. The TOC is highlighting the ditamap's 
+               		<span class="synph">map</span> element title, while the topic associated with the
+               		first 
+               		<span class="synph">topicref</span> in the ditamap is displayed. The second example
+               		shows the same document, open at the home address, in 
+               		<span class="keyword">Microsoft HTML Help</span> format. In this type of output,
+               		the 
+               		<span class="synph">map</span> element in the ditamap is ignored when the TOC is
+               		generated. 
+               	 </div>
+            <figure class="fig" id="Dc_Controlling_Default_Page__fig_47358AC5E19947EE8B3219474A6E2C5F">
+               <figcaption class="fig-title">Example of map title (with no associated topic) displaying in
+                  		  Eclipse Help TOC</figcaption>
+               <div class="fig-contents">
+                  <div class="image-container" style="text-align: left;"><img alt="Screen capture showing unlinked node at top of TOC in Eclipse Help output" class="image" height="153" id="Dc_Controlling_Default_Page__image_819DB84D6D164F7E8AC14B0F9BC7BBE2" src="img/eclipse_help_map_structure-3.png" width="425" /></div>
+               </div>
+            </figure>
+            <figure class="fig" id="Dc_Controlling_Default_Page__fig_860101953A9743348E3E93CF27EE90A8">
+               <figcaption class="fig-title">Example of first topic title displaying in HTML Help
+                  		  TOC</figcaption>
+               <div class="fig-contents">
+                  <div class="image-container" style="text-align: left;"><img alt="Screen capture showing normal linked node at top of TOC in HTML Help output" class="image" height="125" id="Dc_Controlling_Default_Page__image_F87857EB003E4C2F9E752F40362E0E3F" src="img/html_help_map_structure-3.png" width="425" /></div>
+               </div>
+            </figure>
+            <div class="p">One workaround is to structure the ditamap so that the first node is a 
+               		<q class="q">childless</q> 
+               		<span class="synph">topicref</span> element with its 
+               		<span class="synph">toc</span> attribute set to 
+               	 <code class="option">no</code>, and ensuring that the title of the 
+               	 <span class="synph">map</span> element is the same as that first topic. This will
+               	 result in the first topic not appearing in the TOC, creating the illusion that
+               	 the top node links to the topic. The mark-up for the map would therefore follow
+               	 this pattern: 
+               	 
+               <pre class="codeblock">&lt;map title=&quot;Introduction to World Time Pro&quot;&gt;
+  &lt;topicref href=&quot;c_WorldTimePro.dita&quot; toc=&quot;no&quot;/&gt;
+  &lt;topicref href=&quot;c_CalculatingTime.dita&quot;&gt;
+    &lt;topicref .... /&gt;
+    &lt;topicref .... /&gt;
+    ....
+  &lt;/topicref&gt;
+  &lt;topicref href=&quot;c_FractionConverter.dita&quot; /&gt;
+  ....
+&lt;/map&gt;
+</pre> 
+               	 </div>
+            <div class="p">Although this workaround will deliver a good result,
+               		take care that 
+               		<span class="ph">focussing</span>
+               		on the output format (the form) doesn't result in compromises to the
+               		information design (the content), so that the separation of content and form is
+               		
+               		<span class="ph">honoured</span>.
+               		
+               	 </div>
+            <section class="section" id="Dc_Controlling_Default_Page__section_265D935A2D2B4E6DBD85EE4AF8E2784D"> 
+               		
+               <h3 class="section-title">Rationale</h3> 
+               		
+               <div class="p"><a class="xref" href="http://wiki.oasis-open.org/dita/DITA_Help_Special_Purpose_Topics" target="_blank">Special Purpose Topics in DITA Help</a>
+                  		  (OASIS DITA for Help Subcommittee Wiki) 
+                  		</div> 
+               		
+               <blockquote class="lq">
+                  <div> 
+                     		  
+                     <div class="p">&gt;&gt;Q. Does anybody know how you control which topic is attached
+                        			 to the top node of an Eclipse help plugin? By default, it is attached to the
+                        			 same topic as the first node immediately beneath it, which makes for a funny
+                        			 user experience. You can of course control it manually by editing the toc.xml
+                        			 file, but setting up the ditamap to make it generate that way is escaping
+                        			 me.&lt;&lt; 
+                        		  </div> 
+                     		  
+                     <div class="p">Another, more usual, technique is to mark the first topicref in the
+                        			 map with toc=&quot;no&quot;. That adds it to the map element in the Eclipse toc, but not
+                        			 to the TOC itself. For example: 
+                        		  </div> 
+                     		  
+                     <div class="p">DITA source: 
+                        		  </div> 
+                     		  
+                     <pre class="codeblock">&lt;map id=&quot;com.ipl.ditacars.doc&quot; title=&quot;DITA car owner's manual&quot;&gt; 
+      &lt;topicmeta&gt; 
+      &lt;keywords&gt;&lt;indexterm&gt;DITA car&lt;/indexterm&gt;&lt;/keywords&gt; 
+      &lt;/topicmeta&gt; 
+      &lt;topicref href=&quot;welcome.dita&quot; navtitle=&quot;Welcome to your car&quot; 
+      type=&quot;topic&quot; toc=&quot;no&quot;&gt; 
+      &lt;navref mapref=&quot;driving.ditamap&quot;/&gt; 
+      ...</pre> 
+                     		  
+                     <div class="p">Becomes in Eclipse: 
+                        			 
+                        <pre class="codeblock">&lt;toc label=&quot;DITA car owner's manual&quot; topic=&quot;welcome.html&quot;&gt; 
+      &lt;link toc=&quot;driving.xml&quot;/&gt; 
+      ...</pre> 
+                        		  </div> 
+                     		
+                     <p class="lq-reftitle"><a href="http://tech.groups.yahoo.com/group/dita-users/message/8830" target="_blank">Ian Larner, Yahoo! DITA Users Group</a></p>
+                  </div>
+               </blockquote> 
+               	 </section>
+         </div>
+      </section>
+   </div>
+    </div>
+
+    
+  </body></html>

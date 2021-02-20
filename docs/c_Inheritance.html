@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head><meta charset="UTF-8" />
+      
+      <title>Inheritance</title>
+      <link href="resources/base.css" rel="stylesheet" type="text/css" />
+      <meta content="Inheritance is a key technical feature of DITA, as it is inheritance that enables specialisation of information types." name="description" />
+      <meta content="XMLmind DITA Converter 3.8.0" name="generator" />
+   <meta content="width=device-width, initial-scale=1" name="viewport" /><link href="_wh/wh.css" rel="stylesheet" type="text/css" /><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script><script charset="UTF-8" src="_wh/wh.js" type="text/javascript"></script><script charset="UTF-8" defer="defer" src="_wh/search.js" type="text/javascript"></script></head>
+   
+<body>
+    
+
+    <div id="wh-body">
+      <div class="wh-icon-menu" id="wh-menu"></div>
+      <div id="wh-navigation">
+        <ul id="wh-tabs">
+          <li id="wh-toc-tab"><a class="wh-icon-toc" href="#wh-toc-container"></a></li>
+          
+          <li id="wh-search-tab"><a class="wh-icon-search" href="#wh-search-container"></a></li>
+        </ul>
+        <div id="wh-toc-container">
+          <div id="wh-toc-form"><span class="wh-icon-collapse-all" id="wh-toc-collapse-all"></span><span class="wh-icon-expand-all" id="wh-toc-expand-all"></span><span class="wh-toc-spring"></span><span class="wh-icon-previous" id="wh-toc-previous"></span><span class="wh-icon-next" id="wh-toc-next"></span><span class="wh-toc-spring"></span><span class="wh-icon-print" id="wh-toc-print"></span></div>
+          <div id="wh-toc-pane">
+          </div>
+        </div>
+        
+        <div id="wh-search-container">
+          <div id="wh-search-form"><span id="wh-search-group"><span class="wh-icon-search" id="wh-do-search"></span><input id="wh-search-field" type="text" /><span class="wh-icon-cancel" id="wh-cancel-search"></span></span><span class="wh-icon-highlight" id="wh-search-highlight"></span></div>
+          <div id="wh-search-pane">
+            <div id="wh-search-results">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="wh-separator"></div>
+      <div id="wh-content">
+      
+      <section class="concept" id="D1799" lang="en" xml:lang="en">
+         <h2 class="section2-title" id="D1799____TT">Inheritance</h2>
+         <p class="shortdesc">Inheritance is a key technical feature of DITA, as it is
+            	 inheritance that enables 
+            	 <dfn class="term">specialisation</dfn>
+            	 of information types. 
+            </p>
+         <div class="conbody">
+            <div class="p">In object-oriented programming, inheritance is a way to form new program
+               		module 
+               		<dfn class="term">classes</dfn> using classes that have already been defined. DITA
+               		is designed around the principle of inheritance. The DITA base content model
+               		shows that even the three base information types (concept, task and reference) 
+               		<dfn class="term">evolve</dfn> from the 
+               		<span class="synph">topic</span> 
+               		<dfn class="term">proto information type</dfn>, and share a common base structure
+               		whose characteristics they inherit. 
+               	 </div>
+            <figure class="fig" id="D1799__fig_544ADBC2C2004692B1F7CA36F8BE0F92">
+               <figcaption class="fig-title">Evolution of base information types</figcaption>
+               <div class="fig-contents">
+                  <div class="image-container" style="text-align: left;"><img alt="Information Type Content Model - Base" class="image" height="88" id="D1799__image_B4504A5B969A4CEDAF4B98853A6157C3" src="img/info_type_content_model-3.png" width="265" /></div>
+               </div>
+            </figure>
+            <div class="p">This idea of inheritance continues down. A task's 
+               		<span class="synph">step</span> element is based on topic's 
+               		<span class="synph">li</span> element. 
+               	 </div>
+            <div class="p">The 
+               		<span class="ph"><cite class="cite">DITA
+                     						Language Reference</cite></span>
+               		records the inheritance of each element. For example, the 
+               		<span class="synph">step</span> element's inheritance is shown as 
+               		<span class="synph">topic/li</span>, indicating that a 
+               		<span class="synph">topic</span> information type's 
+               		<span class="synph">li</span> element is 
+               		<span class="ph" lang="en-AU" xml:lang="en-AU">specialised</span>
+               		to become 
+               		<span class="synph">task/step</span>, a 
+               		<span class="synph">task</span> information type's 
+               		<span class="synph">step</span> element. 
+               	 </div>
+            <div class="p">DITA's inheritance model makes it easy to 
+               		<span class="ph" lang="en-AU" xml:lang="en-AU">specialise</span>
+               		topics or special elements within topics. You only have to define how the
+               		element is different from its immediate ancestor. 
+               	 </div>
+            <div class="p">This idea reminds us again of Darwinian theory. 
+               	 </div>
+            <div class="p"> 
+               		
+               <figure class="fig" id="D1799__fig_71A43A1AF6394D329C990A83AE79AB15">
+                  <figcaption class="fig-title">Evolution of man and an information type</figcaption>
+                  <div class="fig-contents">
+                     <div class="image-container" style="text-align: left;"><img alt="Evolution of Man" class="image" height="234" id="D1799__image_FE7E78469C404AAFA662997E8B6C8ECF" src="img/evolution-3.png" width="308" /></div>
+                  </div>
+               </figure> 
+               	 </div>
+         </div>
+      </section>
+   </div>
+    </div>
+
+    
+  </body></html>

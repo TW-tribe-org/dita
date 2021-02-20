@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head><meta charset="UTF-8" />
+      
+      <title>Cross-referencing a step</title>
+      <link href="resources/base.css" rel="stylesheet" type="text/css" />
+      <meta content="Cross-references to steps are accomplished with the xref element with a type attribute of li." name="description" />
+      <meta content="XMLmind DITA Converter 3.8.0" name="generator" />
+   <meta content="width=device-width, initial-scale=1" name="viewport" /><link href="_wh/wh.css" rel="stylesheet" type="text/css" /><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script><script charset="UTF-8" src="_wh/wh.js" type="text/javascript"></script><script charset="UTF-8" defer="defer" src="_wh/search.js" type="text/javascript"></script></head>
+   
+<body>
+    
+
+    <div id="wh-body">
+      <div class="wh-icon-menu" id="wh-menu"></div>
+      <div id="wh-navigation">
+        <ul id="wh-tabs">
+          <li id="wh-toc-tab"><a class="wh-icon-toc" href="#wh-toc-container"></a></li>
+          
+          <li id="wh-search-tab"><a class="wh-icon-search" href="#wh-search-container"></a></li>
+        </ul>
+        <div id="wh-toc-container">
+          <div id="wh-toc-form"><span class="wh-icon-collapse-all" id="wh-toc-collapse-all"></span><span class="wh-icon-expand-all" id="wh-toc-expand-all"></span><span class="wh-toc-spring"></span><span class="wh-icon-previous" id="wh-toc-previous"></span><span class="wh-icon-next" id="wh-toc-next"></span><span class="wh-toc-spring"></span><span class="wh-icon-print" id="wh-toc-print"></span></div>
+          <div id="wh-toc-pane">
+          </div>
+        </div>
+        
+        <div id="wh-search-container">
+          <div id="wh-search-form"><span id="wh-search-group"><span class="wh-icon-search" id="wh-do-search"></span><input id="wh-search-field" type="text" /><span class="wh-icon-cancel" id="wh-cancel-search"></span></span><span class="wh-icon-highlight" id="wh-search-highlight"></span></div>
+          <div id="wh-search-pane">
+            <div id="wh-search-results">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="wh-separator"></div>
+      <div id="wh-content">
+      
+      <section class="concept" id="D9148" lang="en" xml:lang="en">
+         <h2 class="section3-title" id="D9148____TT">Cross-referencing a step</h2>
+         <p class="shortdesc">Cross-references to steps are accomplished with the 
+            	 <span class="synph">xref</span> element with a 
+            	 <span class="synph">type</span> attribute of 
+            	 <kbd class="userinput">li</kbd>. 
+            </p>
+         <div class="conbody">
+            <div class="p">When referring a reader to a step in a task, you should not hard-code
+               		the step number. In different contexts (such as when the content is filtered or
+               		transcluded) the step number may be different, or if a step is added, there is
+               		a high risk that the hard-coded reference won't be updated. 
+               	 </div>
+            <div class="p">You must always use the 
+               		<span class="synph">xref</span> element to cross-reference steps, with the 
+               		<span class="synph">type</span> attribute set to 
+               		<kbd class="userinput">li</kbd>. (The 
+               		<span class="synph">li</span> element is the ancestor of the 
+               		<span class="synph">step</span> element.) 
+               	 </div>
+            <div class="p">You can only reference a step by its 
+               		<span class="synph">id</span> attribute; therefore, before you can cross-reference to
+               		a step, you must ensure that the 
+               		<span class="synph">step</span> element's 
+               		<span class="synph">id</span> attribute has a value. 
+               	 </div>
+            <div class="p">The following example illustrates how to cross-reference a step number.
+               		Don't include any text in the 
+               		<span class="synph">xref</span> element, otherwise this text will be rendered (in
+               		most publishing tools), not the step number. 
+               	 </div>
+            <pre class="codeblock">&lt;task id=&quot;keypad1&quot;&gt;
+...
+&lt;step id=&quot;a&quot;&gt; 
+      &lt;cmd&gt;..&lt;/cmd&gt; 
+      &lt;/step&gt; 
+      &lt;step&gt; 
+      &lt;cmd&gt;Repeat step &lt;xref href=&quot;#keypad1/a&quot; type=&quot;li&quot; /&gt; until the red light displays.&lt;/cmd&gt; 
+      &lt;/step&gt;
+...
+&lt;/task&gt;</pre>
+            <div class="p">Referring to a step in another topic is almost identical; the difference
+               		is that the 
+               		<span class="synph">href</span> attribute will include the file name of the other
+               		topic. Again, you must set the 
+               		<span class="synph">type</span> attribute to 
+               		<kbd class="userinput">li</kbd>. 
+               	 </div>
+            <pre class="codeblock">&lt;cmd&gt;Complete step &lt;xref href=&quot;c_panel.dita#keypad2/b&quot; type=&quot;li&quot; /&gt; of 
+the PIN recovery procedure.&lt;/cmd&gt; 
+</pre>
+            <section class="section" id="D9148__section_510B44102C9147E5A259E60EF78E4082"> 
+               		
+               <h3 class="section-title">Rationale</h3> 
+               		
+               <blockquote class="lq">
+                  <div>Use &lt;xref
+                     		  href=&quot;#thistopicid/step1id&quot; type=&quot;li&quot;/&gt;. Editors might not put the @type
+                     		  attribute on. It is supposed to default to the right type in processing, but
+                     		  DITA-OT didn't always do so. I recommend setting it explicitly. 
+                     		
+                     <p class="lq-reftitle"><a href="http://tech.groups.yahoo.com/group/dita-users/message/13292" target="_blank">Deborah Pickett, Yahoo! DITA Users Group</a></p>
+                  </div>
+               </blockquote> 
+               		
+               <blockquote class="lq">
+                  <div> 
+                     		  
+                     <div class="p">Linking within a Topic 
+                        		  </div> 
+                     		  
+                     <div class="p">Insert a cross-reference to a step or other element within the same
+                        			 topic. Prerequisites In the DITA map or search results, right-click the topic
+                        			 that will contain the link and choose Edit (or Open and Lock). Use this
+                        			 procedure to insert an automatically updated reference to any element in the
+                        			 current topic that has an ID. 
+                        		  </div> 
+                     		  
+                     <ol class="ol" id="D9148__ol_71E684226D6343D9BC6568DADA917B26">
+                        <li class="li" id="D9148__li_E75F9C4CD0554932B63D060EBAC5E27E">Put the cursor
+                           				immediately inside the step element you want to reference, before the
+                           				&lt;cmd&gt; element. 
+                           			 </li>
+                        <li class="li" id="D9148__li_C2F03E8507EA44E585D456C0DD00F48B">In Attribute Inspector,
+                           				enter a value in the id attribute for this step, if it does not have one
+                           				already. Imported topics originally developed in XMetaL usually have IDs on
+                           				steps, listitems, tables, figures, and some other elements. Elements in topics
+                           				created in the CMS do not have an ID unless you add one. Enter any text that
+                           				identifies the step, for example, copy_ref_step. 
+                           			 </li>
+                        <li class="li" id="D9148__li_6D6F8F0EE702450DAB3B8C9134E1BCAB">Save. 
+                           			 </li>
+                        <li class="li" id="D9148__li_6E35060F61734B0F88405D38E59AB234">With the cursor
+                           				immediately inside in the step element , right-click and choose Copy Reference.
+                           				
+                           			 </li>
+                        <li class="li" id="D9148__li_BA6F0A85501542F9846BD397BEFEF065">Insert an &lt;xref&gt;
+                           				element where you want the link to appear. 
+                           			 </li>
+                        <li class="li" id="D9148__li_49A98AA2BF9440D38B8FD11D37826FFE">In Attribute Inspector,
+                           				paste the copied reference into the href attribute of the &lt;xref&gt;. The
+                           				href looks something like this:
+                           				LDO:asc1213046590572.xml#asc1213046590572/copy_ref_step 
+                           			 </li>
+                        <li class="li" id="D9148__li_8A6FA12EF5FE465085ECD75C3F5A5381">Delete everything before
+                           				the pound sign (#) from the href. Now the href looks something like this:
+                           				#asc1213046590572/copy_ref_step 
+                           			 </li>
+                        <li class="li" id="D9148__li_35F1A0425E244D728A27661BE324DC59">Release the topic. 
+                           			 </li>
+                     </ol> 
+                     		  
+                     <div class="p">In Web and Eclipse output, the step number appears. In PDF output
+                        			 the step number appears followed by the page number. Example: Cross-reference
+                        			 to a step A cross-reference to the step in this topic that instructs you to
+                        			 Copy Reference contains an &lt;xref&gt; element with no link text in the
+                        			 source. In built output it looks like this: 4, with just the step number in Web
+                        			 and Eclipse, and the step number and page in PDF. 
+                        		  </div> 
+                     		
+                     <p class="lq-reftitle"><a href="http://tech.groups.yahoo.com/group/dita-users/message/12440" target="_blank">Beth Thoenen, quoting Judy Kessler, Yahoo! DITA Users Group</a></p>
+                  </div>
+               </blockquote> 
+               		
+               <div class="note">
+                  <h5 class="note-head">Note</h5>
+                  <div class="note-body">In the DITA Open Toolkit at least, a 
+                     		  <span class="synph">type</span> attribute of st<kbd class="userinput"></kbd>ep
+                     		  will yield the same results as a typ<span class="synph"></span>e attribute of 
+                     		  <kbd class="userinput">li</kbd>. 
+                     		</div>
+               </div> 
+               	 </section>
+         </div>
+      </section>
+   </div>
+    </div>
+
+    
+  </body></html>

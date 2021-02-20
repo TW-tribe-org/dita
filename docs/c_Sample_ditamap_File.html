@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head><meta charset="UTF-8" />
+      
+      <title>Sample ditamap file</title>
+      <link href="resources/base.css" rel="stylesheet" type="text/css" />
+      <meta content="A sample ditamap illustrates how topicref elements are nested to form a hierarchy of topics, and how a reltable section can define the linking relationship between topics." name="description" />
+      <meta content="XMLmind DITA Converter 3.8.0" name="generator" />
+   <meta content="width=device-width, initial-scale=1" name="viewport" /><link href="_wh/wh.css" rel="stylesheet" type="text/css" /><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script><script charset="UTF-8" src="_wh/wh.js" type="text/javascript"></script><script charset="UTF-8" defer="defer" src="_wh/search.js" type="text/javascript"></script></head>
+   
+<body>
+    
+
+    <div id="wh-body">
+      <div class="wh-icon-menu" id="wh-menu"></div>
+      <div id="wh-navigation">
+        <ul id="wh-tabs">
+          <li id="wh-toc-tab"><a class="wh-icon-toc" href="#wh-toc-container"></a></li>
+          
+          <li id="wh-search-tab"><a class="wh-icon-search" href="#wh-search-container"></a></li>
+        </ul>
+        <div id="wh-toc-container">
+          <div id="wh-toc-form"><span class="wh-icon-collapse-all" id="wh-toc-collapse-all"></span><span class="wh-icon-expand-all" id="wh-toc-expand-all"></span><span class="wh-toc-spring"></span><span class="wh-icon-previous" id="wh-toc-previous"></span><span class="wh-icon-next" id="wh-toc-next"></span><span class="wh-toc-spring"></span><span class="wh-icon-print" id="wh-toc-print"></span></div>
+          <div id="wh-toc-pane">
+          </div>
+        </div>
+        
+        <div id="wh-search-container">
+          <div id="wh-search-form"><span id="wh-search-group"><span class="wh-icon-search" id="wh-do-search"></span><input id="wh-search-field" type="text" /><span class="wh-icon-cancel" id="wh-cancel-search"></span></span><span class="wh-icon-highlight" id="wh-search-highlight"></span></div>
+          <div id="wh-search-pane">
+            <div id="wh-search-results">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="wh-separator"></div>
+      <div id="wh-content">
+      
+      <section class="concept" id="D2621" lang="en" xml:lang="en">
+         <h2 class="section3-title">Sample ditamap file</h2>
+         <p class="shortdesc">A sample ditamap illustrates how 
+            	 <span class="synph">topicref</span> elements are nested to form a hierarchy of topics,
+            	 and how a 
+            	 <span class="synph">reltable</span> section can define the linking relationship between
+            	 topics. 
+            </p>
+         <div class="conbody">
+            <pre class="codeblock">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;!DOCTYPE map PUBLIC &quot;-//OASIS//DTD DITA Map//EN&quot; &quot;../dtd/map.dtd&quot;&gt;
+&lt;map title=&quot;WorldTime Pro User Guide&quot;&gt;
+	&lt;topicref format=&quot;dita&quot; href=&quot;Concepts/WorldTimePro.dita&quot; type=&quot;concept&quot;&gt;
+		&lt;topicref format=&quot;dita&quot; href=&quot;Tasks/CalculatingTime.dita&quot; type=&quot;task&quot;&gt;
+			&lt;topicref format=&quot;dita&quot; href=&quot;Tasks/CalculatingHoursInMinutesSeconds.dita&quot; type=&quot;task&quot;/&gt;
+			&lt;topicref format=&quot;dita&quot; href=&quot;Tasks/CalculatingElapsedTime.dita&quot; type=&quot;task&quot;/&gt;
+			&lt;topicref format=&quot;dita&quot; href=&quot;Reference/WorldTimeProGUI.dita&quot; type=&quot;reference&quot;/&gt;
+		&lt;/topicref&gt;
+		&lt;topicref format=&quot;dita&quot; href=&quot;Tasks/UsingFractionConverter.dita&quot; type=&quot;task&quot;/&gt;
+		&lt;topicref format=&quot;dita&quot; href=&quot;Tasks/UsingFractionCreator.dita&quot; type=&quot;task&quot;/&gt;
+		&lt;topicref format=&quot;dita&quot; href=&quot;Tasks/UsingDateAnalysis.dita&quot; type=&quot;task&quot;&gt;
+			&lt;topicref format=&quot;dita&quot; href=&quot;Concepts/GregorianCalendar.dita&quot; type=&quot;concept&quot;/&gt;
+			&lt;topicref format=&quot;dita&quot; href=&quot;Reference/DateAnalysisGUI.dita&quot; type=&quot;reference&quot;/&gt;
+		&lt;/topicref&gt;
+		&lt;topicref format=&quot;dita&quot; href=&quot;Tasks/Troubleshooting.dita&quot; type=&quot;task&quot;/&gt;
+		&lt;topicref format=&quot;dita&quot; href=&quot;Concepts/WhereToBuy.dita&quot; type=&quot;concept&quot;&gt;
+			&lt;topicref format=&quot;dita&quot; href=&quot;Reference/FeatureComparisonTable.dita&quot; type=&quot;reference&quot;/&gt;
+			&lt;topicref format=&quot;html&quot; href=&quot;http://www.helpml.com/wtp/&quot; navtitle=&quot;About WTP Software&quot; print=&quot;no&quot; scope=&quot;external&quot;/&gt;
+		&lt;/topicref&gt;
+	&lt;/topicref&gt;
+	&lt;reltable&gt;
+		&lt;relheader&gt;
+			&lt;relcolspec type=&quot;concept&quot;/&gt;
+			&lt;relcolspec type=&quot;task&quot;/&gt;
+			&lt;relcolspec type=&quot;reference&quot;/&gt;
+		&lt;/relheader&gt;
+		&lt;relrow&gt;
+			&lt;relcell&gt;
+				&lt;topicref href=&quot;Concepts/WorldTimePro.dita&quot; linking=&quot;sourceonly&quot; type=&quot;concept&quot;/&gt;
+			&lt;/relcell&gt;
+			&lt;relcell&gt;
+				&lt;topicref href=&quot;Tasks/CalculatingTime.dita&quot; type=&quot;task&quot;/&gt;
+				&lt;topicref href=&quot;Tasks/UsingFractionConverter.dita&quot; type=&quot;task&quot;/&gt;
+				&lt;topicref href=&quot;Tasks/UsingFractionCreator.dita&quot; type=&quot;task&quot;/&gt;
+				&lt;topicref href=&quot;Tasks/UsingDateAnalysis.dita&quot; type=&quot;task&quot;/&gt;
+				&lt;topicref href=&quot;Tasks/ConvertingMilitaryTime.dita&quot; type=&quot;task&quot;/&gt;
+				&lt;topicref href=&quot;Tasks/Troubleshooting.dita&quot; type=&quot;task&quot;/&gt;
+			&lt;/relcell&gt;
+			&lt;relcell/&gt;
+		&lt;/relrow&gt;
+	&lt;/reltable&gt;
+&lt;/map&gt;
+</pre>
+         </div>
+      </section>
+   </div>
+    </div>
+
+    
+  </body></html>

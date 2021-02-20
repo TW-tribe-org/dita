@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head><meta charset="UTF-8" />
+      
+      <title>Anatomy of a ditamap file</title>
+      <link href="resources/base.css" rel="stylesheet" type="text/css" />
+      <meta content="DITA maps files are primarily made up of topicref, topichead, topicgroup and topicmeta elements. DITA map files may also contain relationship tables, made up of rows and cells containing topicref elements." name="description" />
+      <meta content="XMLmind DITA Converter 3.8.0" name="generator" />
+   <meta content="width=device-width, initial-scale=1" name="viewport" /><link href="_wh/wh.css" rel="stylesheet" type="text/css" /><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script><script charset="UTF-8" src="_wh/wh.js" type="text/javascript"></script><script charset="UTF-8" defer="defer" src="_wh/search.js" type="text/javascript"></script></head>
+   
+<body>
+    
+
+    <div id="wh-body">
+      <div class="wh-icon-menu" id="wh-menu"></div>
+      <div id="wh-navigation">
+        <ul id="wh-tabs">
+          <li id="wh-toc-tab"><a class="wh-icon-toc" href="#wh-toc-container"></a></li>
+          
+          <li id="wh-search-tab"><a class="wh-icon-search" href="#wh-search-container"></a></li>
+        </ul>
+        <div id="wh-toc-container">
+          <div id="wh-toc-form"><span class="wh-icon-collapse-all" id="wh-toc-collapse-all"></span><span class="wh-icon-expand-all" id="wh-toc-expand-all"></span><span class="wh-toc-spring"></span><span class="wh-icon-previous" id="wh-toc-previous"></span><span class="wh-icon-next" id="wh-toc-next"></span><span class="wh-toc-spring"></span><span class="wh-icon-print" id="wh-toc-print"></span></div>
+          <div id="wh-toc-pane">
+          </div>
+        </div>
+        
+        <div id="wh-search-container">
+          <div id="wh-search-form"><span id="wh-search-group"><span class="wh-icon-search" id="wh-do-search"></span><input id="wh-search-field" type="text" /><span class="wh-icon-cancel" id="wh-cancel-search"></span></span><span class="wh-icon-highlight" id="wh-search-highlight"></span></div>
+          <div id="wh-search-pane">
+            <div id="wh-search-results">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="wh-separator"></div>
+      <div id="wh-content">
+      
+      <section class="concept" id="D2622" lang="en" xml:lang="en">
+         <h2 class="section3-title">Anatomy of a ditamap file</h2>
+         <p class="shortdesc">DITA maps files are primarily made up of 
+            	 <span class="synph">topicref</span>, 
+            	 <span class="synph">topichead</span>, 
+            	 <span class="synph">topicgroup</span> and 
+            	 <span class="synph">topicmeta</span> elements. DITA map files may also contain
+            	 relationship tables, made up of rows and cells containing 
+            	 <span class="synph">topicref</span> elements. 
+            </p>
+         <div class="conbody">
+            <div class="p">The vocabulary of a ditamap file is quite simple. The principal element
+               		is the topic reference (<span class="synph">topicref</span>), which is simply a link to a
+               		topic to be included in the collection. The 
+               		<span class="synph">topicref</span> elements can be nested, allowing you to build a
+               		hierarchy of links to topics. 
+               	 </div>
+            <div class="p">Other elements which you can use to refine the hierarchy are: 
+               	 
+               <dl class="dl">
+                  <dt class="dt"><span class="synph">topichead</span> 
+                     		  </dt>
+                  <dd class="dd">an unlinked heading (or group) in the hierarchy 
+                     		  </dd>
+                  <dt class="dt"><span class="synph">topicgroup</span> 
+                     		  </dt>
+                  <dd class="dd">a way of grouping 
+                     			 <span class="synph">topicref</span> elements together without affecting the
+                     			 hierarchy (used for applying characteristics to a group of topics at a time) 
+                     		  </dd>
+                  <dt class="dt"><span class="synph">topicmeta</span> 
+                     		  </dt>
+                  <dd class="dd">metadata for the topic that applies specifically to the context of
+                     			 the publication defined by the ditamap 
+                     		  </dd>
+               </dl> 
+               	 </div>
+            <div class="p">As well as linking to topics, 
+               		<span class="synph">topicref</span> elements can link to other ditamaps, thus
+               		permitting the embedding and re-use of ditamaps. 
+               	 </div>
+            <div class="p">A ditamap file may also contain one or more 
+               		<dfn class="term">relationship table (or reltable)</dfn> sections. A 
+               		<dfn class="term">reltable</dfn> is made up of rows (<span class="synph">relrow</span> elements)
+               		of cells (<span class="synph">relcell</span> elements), usually with a header row
+               		(<span class="synph">relheader</span> elements). Cells contain 
+               		<span class="synph">topicref</span> elements that link to topics. The relationship
+               		between 
+               		<span class="synph">topicref</span> elements within rows and cells determines how
+               		generated links will appear in the output. 
+               	 </div>
+         </div>
+      </section>
+   </div>
+    </div>
+
+    
+  </body></html>

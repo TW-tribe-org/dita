@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head><meta charset="UTF-8" />
+      
+      <title>Image alignment, placement, and sizing</title>
+      <link href="resources/base.css" rel="stylesheet" type="text/css" />
+      <meta content="The align, placement, width, and height attributes of the image element are used to specify the placement and size of images when generated to an output delivery format." name="description" />
+      <meta content="XMLmind DITA Converter 3.8.0" name="generator" />
+   <meta content="width=device-width, initial-scale=1" name="viewport" /><link href="_wh/wh.css" rel="stylesheet" type="text/css" /><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script><script charset="UTF-8" src="_wh/wh.js" type="text/javascript"></script><script charset="UTF-8" defer="defer" src="_wh/search.js" type="text/javascript"></script></head>
+   
+<body>
+    
+
+    <div id="wh-body">
+      <div class="wh-icon-menu" id="wh-menu"></div>
+      <div id="wh-navigation">
+        <ul id="wh-tabs">
+          <li id="wh-toc-tab"><a class="wh-icon-toc" href="#wh-toc-container"></a></li>
+          
+          <li id="wh-search-tab"><a class="wh-icon-search" href="#wh-search-container"></a></li>
+        </ul>
+        <div id="wh-toc-container">
+          <div id="wh-toc-form"><span class="wh-icon-collapse-all" id="wh-toc-collapse-all"></span><span class="wh-icon-expand-all" id="wh-toc-expand-all"></span><span class="wh-toc-spring"></span><span class="wh-icon-previous" id="wh-toc-previous"></span><span class="wh-icon-next" id="wh-toc-next"></span><span class="wh-toc-spring"></span><span class="wh-icon-print" id="wh-toc-print"></span></div>
+          <div id="wh-toc-pane">
+          </div>
+        </div>
+        
+        <div id="wh-search-container">
+          <div id="wh-search-form"><span id="wh-search-group"><span class="wh-icon-search" id="wh-do-search"></span><input id="wh-search-field" type="text" /><span class="wh-icon-cancel" id="wh-cancel-search"></span></span><span class="wh-icon-highlight" id="wh-search-highlight"></span></div>
+          <div id="wh-search-pane">
+            <div id="wh-search-results">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="wh-separator"></div>
+      <div id="wh-content">
+      
+      <section class="concept" id="concept_141498CD15574429BC13C95911FC8B60" lang="en" xml:lang="en">
+         <h2 class="section2-title" id="concept_141498CD15574429BC13C95911FC8B60____TT">Image alignment, placement, and sizing</h2>
+         <p class="shortdesc">The 
+            	 <span class="synph">align</span>, 
+            	 <span class="synph">placement</span>, 
+            	 <span class="synph">width</span>, and 
+            	 <span class="synph">height</span> attributes of the 
+            	 <span class="synph">image</span> element are used to specify the placement and size of
+            	 images when generated to an output delivery format. 
+            </p>
+         <div class="conbody">
+            <div class="p">The placement of the image on the output page or screen is defined in
+               		the 
+               		<span class="synph">placement</span> and 
+               		<span class="synph">align</span> attributes. The 
+               		<span class="synph">placement</span> attribute can be set to 
+               	 <code class="option">inline</code> (placing the image inline with the text in the
+               	 paragraph in which it is placed) or 
+               	 <code class="option">break</code> (placing the image in its own block, with space
+               	 above and below it). The 
+               	 <span class="synph">align</span> attribute has valid values of 
+               	 <code class="option">left</code>, 
+               	 <code class="option">right</code>, 
+               	 <code class="option">center</code> and 
+               	 <code class="option">current</code>. These values specify how the image will be
+               	 aligned on the page or screen. The 
+               	 <span class="synph">align</span> attribute only has an effect if the placement is set
+               	 to 
+               	 <code class="option">break</code>. 
+               	 </div>
+            <div class="p">To display the image in its own block, use the image
+               		element independently of a paragraph element, set the 
+               		<span class="synph">placement</span> attribute to break, and the alignment to 
+               	 <code class="option">left</code>, 
+               	 <code class="option">right</code>, or 
+               	 <code class="option">center</code>. 
+               	 </div>
+            <div class="p">To display an image within a paragraph or other block
+               		element, set the 
+               		<span class="synph">placement</span> attribute to 
+               	 <code class="option">inline</code>, and either omit the 
+               	 <span class="synph">align</span> attribute or set it to 
+               	 <code class="option">current</code> (to inherit the alignment settings of the element
+               	 in which the image is contained). 
+               	 </div>
+            <div class="p">The 
+               		<span class="synph">image</span> element includes 
+               		<span class="synph">height</span> and 
+               		<span class="synph">width</span> attributes. These attributes are used to store the
+               		intended display height and width of the image in the output, expressed in one
+               		of a variety of units, including pixels (<code class="option">px</code>), centimetres
+               	 (<code class="option">cm</code>), points (<code class="option">pt</code>) and inches
+               	 (<code class="option">in</code>). 
+               	 </div>
+            <div class="note">
+               <h5 class="note-head">Tip</h5>
+               <div class="note-body">If you are using the DITA Open
+                  		Toolkit for publishing, you will get the best results if you always use pixels
+                  		as the unit for 
+                  		<span class="synph">height</span> and 
+                  		<span class="synph">width</span> attributes, with the dimensions being the actual
+                  		dimensions of the image. (In other words, do not scale the image using the 
+                  		<span class="synph">height</span> and 
+                  		<span class="synph">width</span> attributes.) 
+                  	 </div>
+            </div>
+            <section class="section" id="concept_141498CD15574429BC13C95911FC8B60__section_52FB32A3D2F84D7B91EC22D42E1A0F98"> 
+               		
+               <h3 class="section-title">Rationale</h3> 
+               		
+               <div class="p"> 
+                  		  
+                  <blockquote class="lq">
+                     <div>Up until
+                        			 DITA-OT 1.5, the fo plugin scales graphics from the dimensions supplied in the
+                        			 DITA source to 72 dots per inch. This enlarges most graphics since typical
+                        			 modern screenshots are at 96 dpi. Some workarounds for earlier versions: - If
+                        			 your authoring tool allows it, remove the height and width attributes from the
+                        			 &lt;image&gt; element in DITA source. - For the &lt;image&gt; element in DITA
+                        			 source, set the height and width attributes with px (pixel) units, as in
+                        			 &quot;100px&quot; - If you use a customization XSL, override named template &quot;placeImage&quot;.
+                        			 Copy and paste the template from xsl/fo/commons.xsl, then comment out the code
+                        			 that scales @height and @width, or change 72 to a larger number (128 works well
+                        			 for print). 
+                        		  
+                        <p class="lq-reftitle"><a href="http://tech.groups.yahoo.com/group/dita-users/message/15921" target="_blank">Craig Sandvik, Yahoo! DITA Users Group</a></p>
+                     </div>
+                  </blockquote> 
+                  		</div> 
+               		
+               <blockquote class="lq">
+                  <div> 
+                     		  
+                     <div class="p">Bitmap (or &quot;raster&quot;) images are collections of pixels. Their
+                        			 dimensions are normally expressed in pixels. When displayed on a computer
+                        			 monitor, which is itself made up of pixels, what you see on the screen is what
+                        			 you expect to see. A pixel is a variable measurement unit... it has a different
+                        			 physical size depending upon the type of monitor or display being used. 
+                        		  </div> 
+                     		  
+                     <div class="p">However, when you output a bitmap image to paper (or a paper
+                        			 simulator like PDF), the pixels need to be somehow converted to fixed physical
+                        			 measurements, such as millimetres. Some programs will scale the images to a
+                        			 fixed size using the resolution of the printing device. For example, if you
+                        			 have a 300 pixels per inch (DPI) printer, and you print a 300 pixel wide
+                        			 picture, its physical size on the printout will be 1 inch. 
+                        		  </div> 
+                     		  
+                     <div class="p">When using the PDF2 transformation in the DITA Open Toolkit, the
+                        			 process uses 72 DPI as the basis for conversion to a fixed size. (72 DPI was
+                        			 the typical resolution for a cathode ray tube computer monitor at an 800 x 600
+                        			 setting.) Thus, our 300 pixel image will be displayed at a physical size of
+                        			 300/72 inches, or 4.2 inches. 
+                        		  </div> 
+                     		  
+                     <div class="p">So, this is why your images seem to be displaying at a larger size
+                        			 in PDF than it in HTML format. Your monitor is displaying the image at perhaps
+                        			 96 DPI, while the PDF is showing it at 72 DPI. 
+                        		  </div> 
+                     		  
+                     <div class="p">Now, for the possible solution. Firstly, make sure you always set
+                        			 the width and height attributes for the image to the dimensions of the image,
+                        			 in pixels. Don't use other measurements, such as 5cm. Don't scale the image by
+                        			 using a measurement other than the natural size of the image. Always include
+                        			 the px unit. (height=&quot;500&quot; is very different to height=&quot;500px&quot;) 
+                        		  </div> 
+                     		</div>
+               </blockquote> 
+               	 </section>
+         </div>
+      </section>
+   </div>
+    </div>
+
+    
+  </body></html>

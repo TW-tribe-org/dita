@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head><meta charset="UTF-8" />
+      
+      <title>Embedded (or nested) ditamaps</title>
+      <link href="resources/base.css" rel="stylesheet" type="text/css" />
+      <meta content="The technique of using embedded, or nested, ditamaps can make it easier to manage documents by separating complex collections of topics into a number of smaller, simpler collections." name="description" />
+      <meta content="XMLmind DITA Converter 3.8.0" name="generator" />
+   <meta content="width=device-width, initial-scale=1" name="viewport" /><link href="_wh/wh.css" rel="stylesheet" type="text/css" /><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script><script charset="UTF-8" src="_wh/wh.js" type="text/javascript"></script><script charset="UTF-8" defer="defer" src="_wh/search.js" type="text/javascript"></script></head>
+   
+<body>
+    
+
+    <div id="wh-body">
+      <div class="wh-icon-menu" id="wh-menu"></div>
+      <div id="wh-navigation">
+        <ul id="wh-tabs">
+          <li id="wh-toc-tab"><a class="wh-icon-toc" href="#wh-toc-container"></a></li>
+          
+          <li id="wh-search-tab"><a class="wh-icon-search" href="#wh-search-container"></a></li>
+        </ul>
+        <div id="wh-toc-container">
+          <div id="wh-toc-form"><span class="wh-icon-collapse-all" id="wh-toc-collapse-all"></span><span class="wh-icon-expand-all" id="wh-toc-expand-all"></span><span class="wh-toc-spring"></span><span class="wh-icon-previous" id="wh-toc-previous"></span><span class="wh-icon-next" id="wh-toc-next"></span><span class="wh-toc-spring"></span><span class="wh-icon-print" id="wh-toc-print"></span></div>
+          <div id="wh-toc-pane">
+          </div>
+        </div>
+        
+        <div id="wh-search-container">
+          <div id="wh-search-form"><span id="wh-search-group"><span class="wh-icon-search" id="wh-do-search"></span><input id="wh-search-field" type="text" /><span class="wh-icon-cancel" id="wh-cancel-search"></span></span><span class="wh-icon-highlight" id="wh-search-highlight"></span></div>
+          <div id="wh-search-pane">
+            <div id="wh-search-results">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="wh-separator"></div>
+      <div id="wh-content">
+      
+      <section class="concept" id="D2069" lang="en" xml:lang="en">
+         <h2 class="section2-title" id="D2069____TT">Embedded (or nested) ditamaps</h2>
+         <p class="shortdesc">The technique of using embedded, or nested, ditamaps can make it
+            	 easier to manage documents by separating complex collections of topics into a
+            	 number of smaller, simpler collections. 
+            </p>
+         <div class="conbody">
+            <div class="p">The 
+               		<span class="synph">topicref</span> elements in a ditamap usually reference a topic.
+               		However, they can also reference ditamaps, which opens up the opportunity for
+               		having 
+               		<dfn class="term">embedded</dfn> (or 
+               		<dfn class="term">nested</dfn>) maps. 
+               	 </div>
+            <div class="p">A reference to a ditamap differs from a reference to a topic in having a
+               		
+               		<span class="synph">format</span> attribute of 
+               	 <code class="option">ditamap</code>. The syntax of a reference to a ditamap is: 
+               	 
+               <pre class="codeblock">&lt;topicref 
+  format=&quot;ditamap&quot;
+   href=&quot;engine/ej25.ditamap&quot;
+   navtitle=&quot;2.5 Litre Engine&quot;&gt;
+&lt;/topicref&gt;</pre> 
+               	 </div>
+            <div class="p"><a class="xref" href="#D2069__fig_B339ABDFE1C54374B7D8D0EC5754DB63">Re-used, embedded (or nested) ditamaps</a>
+               		illustrates how ditamaps (such as the 
+               		<cite class="cite">Storing Data</cite> and 
+               		<cite class="cite">Widget Specifications</cite> ditamaps) can be nested within another
+               		ditamap (in this case, the 
+               		<cite class="cite">Widget User Guide</cite>). Nesting can continue down to many levels
+               		deep. And ditamaps can be nested within 
+               		<b class="b">many</b> other ditamaps. 
+               		
+               <figure class="fig" id="D2069__fig_B339ABDFE1C54374B7D8D0EC5754DB63">
+                  <figcaption class="fig-title">Re-used, embedded (or nested) ditamaps</figcaption>
+                  <div class="fig-contents">
+                     <div class="image-container" style="text-align: left;"><img alt="Diagram showing principle of re-used, embedded (or nested) ditamaps" class="image" height="235" id="D2069__image_CAD5044560F74455AFB84066FB3C138A" src="img/embedded_maps-3.gif" width="425" /></div>
+                  </div>
+               </figure> 
+               	 </div>
+            <div class="p">Nesting ditamaps is a useful tool in permitting content re-use and
+               		authoring efficiency. 
+               	 </div>
+            <div class="p">The term 
+               		<dfn class="term">mapref</dfn> is sometimes used as shorthand for a 
+               		<span class="synph">topicref</span> with a 
+               		<span class="synph">format</span> attribute of 
+               	 <code class="option">ditamap</code>. Until 
+               	 <span class="ph">DITA 1.2</span>,
+               	 there was no DITA element of 
+               	 <span class="synph">mapref</span>, but 1.2 introduced a 
+               	 <span class="synph">mapref</span> as a convenience element identical in functionality
+               	 to 
+               	 <span class="synph">topicref</span> with a 
+               	 <span class="synph">format</span> attribute of 
+               	 <code class="option">ditamap</code>. 
+               	 </div>
+            <section class="section" id="D2069__section_914C145F9F2B4F4AAA7A55E7796BD0BE"> 
+               		
+               <h3 class="section-title">Rationale</h3> 
+               		
+               <blockquote class="lq">
+                  <div> 
+                     		  
+                     <div class="p">&gt; But I'd like to have the navtitles of these nested maps appear
+                        			 in the TOC.&lt; 
+                        		  </div> 
+                     		  
+                     <div class="p"> If you still want to persevere, then it's too late at the
+                        			 map2htmtoc.xsl stage. Merged maps are dealt with at a much earlier stage
+                        			 (namely, mapref, which is one of the preprocess stages), which currently
+                        			 discards the root element (and its attributes, including title) of merged maps.
+                        			 You will need to look at the mapref XSLT (xsl/preprocess/maprefImpl.xsl) and
+                        			 change/override it to not throw this information away. 
+                        		  </div> 
+                     		
+                     <p class="lq-reftitle"><a href="http://tech.groups.yahoo.com/group/dita-users/message/12930" target="_blank">eborah Pickett, Yahoo! DITA Users Group</a></p>
+                  </div>
+               </blockquote> 
+               	 </section>
+         </div>
+      </section>
+   </div>
+    </div>
+
+    
+  </body></html>

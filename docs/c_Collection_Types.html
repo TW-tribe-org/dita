@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head><meta charset="UTF-8" />
+      
+      <title>Collection types</title>
+      <link href="resources/base.css" rel="stylesheet" type="text/css" />
+      <meta content="The collection-type attribute of the topicref element defines the relationship between any nested topic references within a ditamap. Changing the collection type affects the way in which automatic links and topic previews are generated when the ditamap is processed to an output format." name="description" />
+      <meta content="XMLmind DITA Converter 3.8.0" name="generator" />
+   <meta content="width=device-width, initial-scale=1" name="viewport" /><link href="_wh/wh.css" rel="stylesheet" type="text/css" /><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script><script charset="UTF-8" src="_wh/wh.js" type="text/javascript"></script><script charset="UTF-8" defer="defer" src="_wh/search.js" type="text/javascript"></script></head>
+   
+<body>
+    
+
+    <div id="wh-body">
+      <div class="wh-icon-menu" id="wh-menu"></div>
+      <div id="wh-navigation">
+        <ul id="wh-tabs">
+          <li id="wh-toc-tab"><a class="wh-icon-toc" href="#wh-toc-container"></a></li>
+          
+          <li id="wh-search-tab"><a class="wh-icon-search" href="#wh-search-container"></a></li>
+        </ul>
+        <div id="wh-toc-container">
+          <div id="wh-toc-form"><span class="wh-icon-collapse-all" id="wh-toc-collapse-all"></span><span class="wh-icon-expand-all" id="wh-toc-expand-all"></span><span class="wh-toc-spring"></span><span class="wh-icon-previous" id="wh-toc-previous"></span><span class="wh-icon-next" id="wh-toc-next"></span><span class="wh-toc-spring"></span><span class="wh-icon-print" id="wh-toc-print"></span></div>
+          <div id="wh-toc-pane">
+          </div>
+        </div>
+        
+        <div id="wh-search-container">
+          <div id="wh-search-form"><span id="wh-search-group"><span class="wh-icon-search" id="wh-do-search"></span><input id="wh-search-field" type="text" /><span class="wh-icon-cancel" id="wh-cancel-search"></span></span><span class="wh-icon-highlight" id="wh-search-highlight"></span></div>
+          <div id="wh-search-pane">
+            <div id="wh-search-results">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="wh-separator"></div>
+      <div id="wh-content">
+      
+      <section class="concept" id="D9214" lang="en" xml:lang="en">
+         <h2 class="section3-title" id="D9214____TT">Collection types</h2>
+         <p class="shortdesc">The 
+            	 <span class="synph">collection-type</span> attribute of the 
+            	 <span class="synph">topicref</span> element defines the relationship between any nested
+            	 topic references within a ditamap. Changing the collection type affects the way
+            	 in which automatic links and topic previews are generated when the ditamap is
+            	 processed to an output format. 
+            </p>
+         <div class="conbody">
+            <div class="p"> The way links are generated during output processing is dependent upon
+               		the 
+               		<span class="synph">collection-type</span> attribute of 
+               		<dfn class="term">parent</dfn> 
+               		<span class="synph">topicref</span> elements in the hierarchy section of the ditamap,
+               		or the containing 
+               		<span class="synph">relcell</span> section in the reltable section of the ditamap. (A
+               		parent 
+               		<span class="synph">topicref</span> is one containing nested 
+               		<span class="synph">topicref</span> elements, or 
+               		<dfn class="term">child nodes</dfn>.) The 
+               		<span class="synph">collection-type</span> therefore defines the type of hierarchical
+               		relationship between members of the same 
+               		<dfn class="term">branch</dfn> of a ditamap 
+               		<dfn class="term">tree</dfn>, or in the same cell in the relationship table 
+               		<span class="synph">relcell</span> element. 
+               	 </div>
+            <div class="p">There are five collection types in DITA: 
+               	 
+               <dl class="dl">
+                  <dt class="dt">unordered 
+                     		  </dt>
+                  <dd class="dd">A collection of topics where links are generated from parent to
+                     			 children, and from children to parent. 
+                     		  </dd>
+                  <dt class="dt">family 
+                     		  </dt>
+                  <dd class="dd">A collection of topics where links are generated from parent to
+                     			 children, from children to parent, and from sibling to sibling. 
+                     		  </dd>
+                  <dt class="dt">sequence 
+                     		  </dt>
+                  <dd class="dd">A collection of topics where links are generated from parent to
+                     			 children, from children to parent, and from child to previous sibling (if
+                     			 applicable) and next sibling (if applicable). 
+                     		  </dd>
+                  <dt class="dt">choice 
+                     		  </dt>
+                  <dd class="dd">Not commonly used, but is intended for situations where the reader
+                     			 needs to select one child topic to proceed. This might be useful when the
+                     			 output document is an interactive decision-support application. Most processors
+                     			 treat 
+                     		  <code class="option">choice</code> in the same way as 
+                     		  <code class="option">unordered</code>. 
+                     		  </dd>
+                  <dt class="dt">tree 
+                     		  </dt>
+                  <dd class="dd"><i class="i">Tree</i> is not supported. 
+                     		  </dd>
+               </dl> 
+               	 </div>
+            <div class="p">Example syntax: 
+               		<code class="codeph">&lt;topicref href=&quot;abc.dita&quot; collection-type=&quot;sequence&quot;
+                  		  /&gt;</code> 
+               	 </div>
+            <div class="p">Although 
+               		<span class="synph">collection-type</span> attributes are valid in relationship table
+               		
+               		<span class="synph">relcell</span> elements, some don't make a lot of sense in that
+               		context.
+               	 </div>
+            <div class="p">For example, setting a 
+               		<span class="synph">collection-type</span> in a relationship table cell to 
+               	 <code class="option">sequence</code> will result in a 
+               	 <b class="uicontrol">Next Topic</b> link in the output linking to the next
+               	 topic referenced in the cell, rather than the next topic in the TOC sequence
+               	 (as may logically be expected by the reader). 
+               	 </div>
+            <div class="p">Although it is possible to set a 
+               		<span class="synph">collection-type</span> attribute of 
+               	 <code class="option">sequence</code> to a 
+               	 <span class="synph">relcell</span> element, this is generally confusing to the user, as
+               	 it will set a topic sequence that differs from the sequence of topics in the
+               	 hierarchy. The same logic applies to the 
+               	 <code class="option">choice</code> attribute value. For this reason, avoid using 
+               	 <span class="synph">collection-type</span> attribute values of 
+               	 <code class="option">sequence</code> and 
+               	 <code class="option">choice</code>. An exception is when you are creating documents
+               	 with multiple sequential navigation pathways. 
+               	 </div>
+            <div class="p">Likewise, a 
+               		<dfn class="term">reltable</dfn> doesn't often have parent/child relationships like
+               		the hierarchy section of the map does, so using a 
+               	 <code class="option">family</code> 
+               	 <span class="synph">collection-type</span> again rarely makes sense in 
+               	 <dfn class="term">reltables</dfn>. 
+               	 </div>
+            <section class="section" id="D9214__section_3874427C3C724D80AA52537D3E994732"> 
+               		
+               <h3 class="section-title">Rationale</h3> 
+               		
+               <blockquote class="lq">
+                  <div>Unordered is the
+                     		  default if you don't specify a collection type. With
+                     		  collection-type=&quot;unordered&quot;, normally the output gives you an unordered list of
+                     		  child links. Choice is supposed to indicate that the reader should pick one
+                     		  child topic from those supplied. Example: a parent topic &quot;Installing the
+                     		  software&quot; with two child topics &quot;Installing the software using the command
+                     		  line&quot; and &quot;Installing the software using the GUI&quot;. DITA-OT doesn't do anything
+                     		  different when publishing &quot;unordered&quot; or &quot;choice&quot;. The specification for
+                     		  collection-type is here:
+                     		  http://docs.oasis-open.org/dita/v1.1/CD01/langspec/common/topicref-atts.html 
+                     		
+                     <p class="lq-reftitle">Deborah Pickett, Yahoo! DITA Users Group</p>
+                  </div>
+               </blockquote> 
+               	 </section>
+         </div>
+      </section>
+   </div>
+    </div>
+
+    
+  </body></html>

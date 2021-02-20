@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head><meta charset="UTF-8" />
+      
+      <title>The xref element</title>
+      <link href="resources/base.css" rel="stylesheet" type="text/css" />
+      <meta content="The cross-reference element is used for linking or otherwise cross-referencing text within a topic to other topics, elements within a topic, or resources external to the DITA collection." name="description" />
+      <meta content="XMLmind DITA Converter 3.8.0" name="generator" />
+   <meta content="width=device-width, initial-scale=1" name="viewport" /><link href="_wh/wh.css" rel="stylesheet" type="text/css" /><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script><script charset="UTF-8" src="_wh/wh.js" type="text/javascript"></script><script charset="UTF-8" defer="defer" src="_wh/search.js" type="text/javascript"></script></head>
+   
+<body>
+    
+
+    <div id="wh-body">
+      <div class="wh-icon-menu" id="wh-menu"></div>
+      <div id="wh-navigation">
+        <ul id="wh-tabs">
+          <li id="wh-toc-tab"><a class="wh-icon-toc" href="#wh-toc-container"></a></li>
+          
+          <li id="wh-search-tab"><a class="wh-icon-search" href="#wh-search-container"></a></li>
+        </ul>
+        <div id="wh-toc-container">
+          <div id="wh-toc-form"><span class="wh-icon-collapse-all" id="wh-toc-collapse-all"></span><span class="wh-icon-expand-all" id="wh-toc-expand-all"></span><span class="wh-toc-spring"></span><span class="wh-icon-previous" id="wh-toc-previous"></span><span class="wh-icon-next" id="wh-toc-next"></span><span class="wh-toc-spring"></span><span class="wh-icon-print" id="wh-toc-print"></span></div>
+          <div id="wh-toc-pane">
+          </div>
+        </div>
+        
+        <div id="wh-search-container">
+          <div id="wh-search-form"><span id="wh-search-group"><span class="wh-icon-search" id="wh-do-search"></span><input id="wh-search-field" type="text" /><span class="wh-icon-cancel" id="wh-cancel-search"></span></span><span class="wh-icon-highlight" id="wh-search-highlight"></span></div>
+          <div id="wh-search-pane">
+            <div id="wh-search-results">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="wh-separator"></div>
+      <div id="wh-content">
+      
+      <section class="concept" id="concept_1976AE4D9BD0406695EE4ECDBF53CE90" lang="en" xml:lang="en">
+         <h2 class="section2-title" id="concept_1976AE4D9BD0406695EE4ECDBF53CE90____TT">The 
+            	 <span class="synph">xref</span> element</h2>
+         <p class="shortdesc">The cross-reference element is used for linking or otherwise
+            	 cross-referencing text within a topic to other topics, elements within a topic,
+            	 or resources external to the DITA collection. 
+            </p>
+         <div class="conbody">
+            <div class="p">The cross-reference (<span class="synph">xref</span>) element allows you to link
+               		text within the body of a DITA topic to different 
+               		<dfn class="term">target</dfn> resources. Although you can manually specify the text
+               		for the cross-reference or link itself, in most cases you should let DITA 
+               		<dfn class="term">calculate</dfn> the text based on the type of resource you are
+               		linking to. You specify that you want DITA to calculate the cross-reference
+               		text by leaving the element empty. For example, if you cross-reference a figure
+               		(<dfn class="term">fig</dfn>) element, the cross-reference text may be automatically
+               		generated as 
+               		<samp class="systemoutput">Figure 15</samp>. If you provide text within the 
+               		<span class="synph">xref</span> element, that text will be used as the
+               		cross-reference text. 
+               	 </div>
+            <div class="p">Likewise, if you cross-reference a topic, and leave the 
+               		<span class="synph">xref</span> element empty, the target topic title will be used as
+               		the cross-reference text. For examples of automatically-generated
+               		cross-reference text, see 
+               		<a class="xref" href="c_Cross-references_Sample_Topic.html#concept_sample_xref">Sample topic - cross-references</a>.
+               		
+               	 </div>
+            <div class="p">The cross-reference (<span class="synph">xref</span>) element has the following
+               		attributes: 
+               	 
+               <dl class="dl">
+                  <dt class="dt">href 
+                     		  </dt>
+                  <dd class="dd">nominates the address of the resource to be referenced, such as a
+                     			 topic, a block within a topic, a PDF file, an external Web resource, or an
+                     			 e-mail address. 
+                     		  </dd>
+                  <dt class="dt">type 
+                     		  </dt>
+                  <dd class="dd">describes the type of resource being referenced, such as 
+                     			 <kbd class="userinput">concept</kbd> for a DITA concept topic, 
+                     			 <kbd class="userinput">li</kbd> for a list item in a list within a topic, 
+                     			 <kbd class="userinput">fn</kbd> for a footnote within a topic, 
+                     			 <kbd class="userinput">fig</kbd> for a figure within a topic, or 
+                     			 <kbd class="userinput">table</kbd> for a table within a topic. 
+                     		  </dd>
+                  <dt class="dt">format 
+                     		  </dt>
+                  <dd class="dd">describes the file format of resource being referenced, such as 
+                     			 <kbd class="userinput">dita</kbd> for a DITA topic, 
+                     			 <kbd class="userinput">pdf</kbd> for a PDF file, and 
+                     			 <kbd class="userinput">html</kbd> for a Web resource. 
+                     		  </dd>
+                  <dt class="dt">scope 
+                     		  </dt>
+                  <dd class="dd">indicates whether the referenced resource is within the same
+                     			 document as the topic (<code class="option">local</code>), or whether it is external to
+                     		  the document (<code class="option">external</code>). 
+                     		  </dd>
+               </dl> 
+               	 </div>
+            <div class="p">The syntax of the 
+               		<span class="synph">href</span> attribute is illustrated through the following
+               		examples: 
+               	 
+               <ul class="ul" id="concept_1976AE4D9BD0406695EE4ECDBF53CE90__ul_B4FACE72071C4F568EB15F21979AF701">
+                  <li class="li" id="concept_1976AE4D9BD0406695EE4ECDBF53CE90__li_60F59DE1F4BD459D80F6F3F8B22B842C">Reference to a topic (or the
+                     		  first topic in a composite (<dfn class="term">ditabase</dfn>) topic): 
+                     		  <kbd class="userinput">&quot;file.dita&quot;</kbd> 
+                     		</li>
+                  <li class="li" id="concept_1976AE4D9BD0406695EE4ECDBF53CE90__li_95097C195DCC4357B60049E08B5E4747">Reference to a specific
+                     		  topic in a composite (<dfn class="term">ditabase</dfn>) topic: 
+                     		  <kbd class="userinput">&quot;file.dita#topicid&quot;</kbd> 
+                     		</li>
+                  <li class="li" id="concept_1976AE4D9BD0406695EE4ECDBF53CE90__li_65AF3A9992CC44F7AE1544D6679C9900">Reference to an element
+                     		  inside a DITA topic: 
+                     		  <kbd class="userinput">&quot;file.dita#topicid/elementid&quot;</kbd> 
+                     		</li>
+                  <li class="li" id="concept_1976AE4D9BD0406695EE4ECDBF53CE90__li_D1B70DADDBFB4872873CDB4622AF5CDC">Reference to an element in a
+                     		  ditamap: 
+                     		  <kbd class="userinput">&quot;collection.ditamap#map-branch&quot;</kbd> 
+                     		</li>
+                  <li class="li" id="concept_1976AE4D9BD0406695EE4ECDBF53CE90__li_46497B73CD34448A9D70A70B92AFAD9A">Reference to an image: 
+                     		  <kbd class="userinput">&quot;example.png&quot;</kbd> 
+                     		</li>
+                  <li class="li" id="concept_1976AE4D9BD0406695EE4ECDBF53CE90__li_C7E14BB35E8548988A590AB1DE12D9ED">Reference to an external
+                     		  resource: 
+                     		  <kbd class="userinput">&quot;http://www.example.org&quot;</kbd> 
+                     		</li>
+               </ul> 
+               	 </div>
+         </div>
+      </section>
+   </div>
+    </div>
+
+    
+  </body></html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head><meta charset="UTF-8" />
+      
+      <title>Designing a topic hierarchy</title>
+      <link href="resources/base.css" rel="stylesheet" type="text/css" />
+      <meta content="A well-designed topic hierarchy will make the reader's task of finding information in a publication easier." name="description" />
+      <meta content="XMLmind DITA Converter 3.8.0" name="generator" />
+   <meta content="width=device-width, initial-scale=1" name="viewport" /><link href="_wh/wh.css" rel="stylesheet" type="text/css" /><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script><script charset="UTF-8" src="_wh/wh.js" type="text/javascript"></script><script charset="UTF-8" defer="defer" src="_wh/search.js" type="text/javascript"></script></head>
+   
+<body>
+    
+
+    <div id="wh-body">
+      <div class="wh-icon-menu" id="wh-menu"></div>
+      <div id="wh-navigation">
+        <ul id="wh-tabs">
+          <li id="wh-toc-tab"><a class="wh-icon-toc" href="#wh-toc-container"></a></li>
+          
+          <li id="wh-search-tab"><a class="wh-icon-search" href="#wh-search-container"></a></li>
+        </ul>
+        <div id="wh-toc-container">
+          <div id="wh-toc-form"><span class="wh-icon-collapse-all" id="wh-toc-collapse-all"></span><span class="wh-icon-expand-all" id="wh-toc-expand-all"></span><span class="wh-toc-spring"></span><span class="wh-icon-previous" id="wh-toc-previous"></span><span class="wh-icon-next" id="wh-toc-next"></span><span class="wh-toc-spring"></span><span class="wh-icon-print" id="wh-toc-print"></span></div>
+          <div id="wh-toc-pane">
+          </div>
+        </div>
+        
+        <div id="wh-search-container">
+          <div id="wh-search-form"><span id="wh-search-group"><span class="wh-icon-search" id="wh-do-search"></span><input id="wh-search-field" type="text" /><span class="wh-icon-cancel" id="wh-cancel-search"></span></span><span class="wh-icon-highlight" id="wh-search-highlight"></span></div>
+          <div id="wh-search-pane">
+            <div id="wh-search-results">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="wh-separator"></div>
+      <div id="wh-content">
+      
+      <section class="concept" id="D2368" lang="en" xml:lang="en">
+         <h2 class="section3-title" id="D2368____TT">Designing a topic hierarchy</h2>
+         <p class="shortdesc">A well-designed topic hierarchy will make the reader's task of
+            	 finding information in a publication easier. 
+            </p>
+         <div class="conbody">
+            <div class="p">Structuring the content of a document is one of the most important steps
+               		in the authoring process. It is here that you establish the logical
+               		relationship between topics, and add context to the set of topics. 
+               	 </div>
+            <div class="p">Some theoretical considerations to make when deciding on the structure
+               		of topics include the following. 
+               	 
+               <ul class="ul" id="D2368__ul_FD7136A7BBCD46DCA3DAC7A3EE4098E9">
+                  <li class="li" id="D2368__li_B3C8E13975074BC29ED652CDE54FB1DD">The human mind can
+                     		  manipulate about four concepts at a time. 
+                     		</li>
+                  <li class="li" id="D2368__li_2E5A5A52847D463C9F506C0690FC3962">Humans make better decisions
+                     		  when presented with groups of seven choices (Miller's Law)<a class="fn-link" href="#I_d912e38_"><sup class="fn-callout">(1)</sup></a>.
+                     		  
+                     		</li>
+               </ul> 
+               	 </div>
+            <div class="p">Translated to a document structure, this points to an ideal document
+               		structure made up of 
+               		<dfn class="term">parent topics</dfn> with seven 
+               		<dfn class="term">child topics</dfn> at every level, and no more than four 
+               		<dfn class="term">generations</dfn> of topic families. 
+               	 </div>
+            <div class="p">A three level hierarchy with seven topics per menu will permit 343
+               		pages. Four layers of ten topics permits up to 10,000 topics, which is more
+               		than enough for even the largest manuals. 
+               	 </div>
+            <div class="p">The human mind thinks in associative, rather than linear, patterns. Thus
+               		we 
+               		<q class="q">get on the wrong track</q>, and 
+               		<q class="q">forget how we got onto this subject</q>. The human brain stores
+               		information in this way also, by finding a similar experience and associating
+               		it with the current experience (<q class="q">this tastes like vinegar</q>). 
+               	 </div>
+            <div class="p">In DITA, concept information is separated from task and reference
+               		information. This makes it more difficult to structure a document purely around
+               		the goals of the reader, unless the nature of the information allows the
+               		creation of standard sets of one concept, one task and one reference topic.
+               		Such an information model would permit a TOC structure such as: 
+               	 
+               <ul class="ul" id="D2368__ul_FA6B38BFD22E49F9B6A50BC702D949E0">
+                  <li class="li" id="D2368__li_CA8120F7867E47D086733EF397AABCD8">Starting 
+                     		  
+                     <ul class="ul" id="D2368__ul_4C661F30A3FC478C882E79874A614038">
+                        <li class="li" id="D2368__li_0C52EAF2385B4E169BC2E010C58F2DF3">Engine principles
+                           				(concept) 
+                           			 </li>
+                        <li class="li" id="D2368__li_07E341711E394A209C99E8169B74926C">Starting the engine
+                           				(task) 
+                           			 </li>
+                        <li class="li" id="D2368__li_9AD5D8F0B938453B9FDBF1C1A47C7E5F">Engine specifications
+                           				(reference) 
+                           			 </li>
+                     </ul> 
+                     		</li>
+               </ul> 
+               	 </div>
+            <div class="p">An alternative approach would be to group concept topics, task topics
+               		and reference topics, resulting in a high level structure such as: 
+               	 
+               <ul class="ul" id="D2368__ul_1D4D42A3DA15496EAF3843C1DADEBBAA">
+                  <li class="li" id="D2368__li_8CE757BACCEB46E795B05576AA2CA2E8">Car Concepts 
+                     		  
+                     <ul class="ul" id="D2368__ul_F64AA91B7B89435E8346ABFBD8DB7EA1">
+                        <li class="li" id="D2368__li_64917478C70048148FB82DF1C5D71CC8">Starting 
+                           			 </li>
+                        <li class="li" id="D2368__li_431EED1BD3DB4357BC606BAD79E73BAB">Driving 
+                           			 </li>
+                        <li class="li" id="D2368__li_0A6686C4C8974C60B6245A2314477128">Stopping 
+                           			 </li>
+                     </ul> 
+                     		</li>
+                  <li class="li" id="D2368__li_11F047536B1841658A9CD9100788C560">Car Tasks 
+                     		  
+                     <ul class="ul" id="D2368__ul_6A5D4C63BAA942879A55E38F642927D5">
+                        <li class="li" id="D2368__li_AE22AA50E5D041A4828014E00A0733C3">Starting 
+                           			 </li>
+                        <li class="li" id="D2368__li_39BEA4D3CAAD450BB8895BCE1A4CCDA6">Driving 
+                           			 </li>
+                        <li class="li" id="D2368__li_4A914C8E6D1F4DEBBA4A6D288956D3FB">Stopping 
+                           			 </li>
+                     </ul> 
+                     		</li>
+                  <li class="li" id="D2368__li_4447B23DA54B4CDA8971351692657517">Car Reference Information 
+                     		  
+                     <ul class="ul" id="D2368__ul_1C67429B69FE44129FA66D6C38740B54">
+                        <li class="li" id="D2368__li_5F6EE2443E364C44A483CB4C3195ED9F">Starting 
+                           			 </li>
+                        <li class="li" id="D2368__li_93A51BC407BA4C2C8B48874239235DBF">Driving 
+                           			 </li>
+                        <li class="li" id="D2368__li_736604F4A40E46499AA8B6799E681068">Stopping 
+                           			 </li>
+                     </ul> 
+                     		</li>
+               </ul> 
+               	 </div>
+            <div class="p">In reality, however, most information models do not have such a
+               		repeatable structure. More likely is that there will be a concept topic that
+               		has three or four related task topics, with a reference topic that might be
+               		associated with a dozen concepts. 
+               	 </div>
+            <div class="p">The best structure for a particular document is not something that can
+               		be easily prescribed; it is the responsibility of the author to devise a
+               		logical structure that will support the aims of the deliverable document. 
+               	 </div>
+            <div class="p">You should consider the following questions when designing a TOC and a
+               		structure for your topics: 
+               	 
+               <ul class="ul" id="D2368__ul_2DB535D47D2A4BE89791A72E2D575A33">
+                  <li class="li" id="D2368__li_DD14DF49F4C5493D894F14E8B8F2B97A">What level of detail will be
+                     		  used? 
+                     		</li>
+                  <li class="li" id="D2368__li_36EB32C36A4C4C228B21264E422E24DD">How much information will
+                     		  each node contain? 
+                     		</li>
+                  <li class="li" id="D2368__li_BB34167DC07148F287B60CE9D874EE1A">What nodes will connect to
+                     		  what other nodes? 
+                     		</li>
+                  <li class="li" id="D2368__li_67D63FF85ECC4BF18ADE893C7F80990B">What sort of links will be
+                     		  used? 
+                     		</li>
+                  <li class="li" id="D2368__li_F774BB7F46D144DE895FCCD750B6CEEC">What entry points are
+                     		  needed? 
+                     		</li>
+               </ul> 
+               	 </div>
+            <div class="p">Two more specific guidelines to adopt are: 
+               	 </div>
+            <ul class="ul" id="D2368__ul_9631D25F19C14FC99B93FBAF7D9CE7B8">
+               <li class="li" id="D2368__li_A581622047E24D8F91798DCCEE6B00A9">Designing your structure
+                  		  with a single node at the top of the tree hierarchy (a 
+                  		  <q class="q">mother-of-all-topics</q>) from which all other topics branch. This
+                  		  helps ensure logical 
+                  		  <dfn class="term">breadcrumb</dfn> links and other navigation pathways. 
+                  		</li>
+               <li class="li" id="D2368__li_99E80B1138AB48BA894BDD06D300872D">Do not use topic headings
+                  		  (<span class="synph">topichead</span> elements). Instead, use stub or summary topics:
+                  		  topics that contain only a title. The publishing process can automatically
+                  		  build the content of such stub topics based on the short descriptions of its
+                  		  child topics. 
+                  		</li>
+            </ul>
+            <section class="section" id="D2368__section_4CA6F6AFF2BB479C84B84A9D1E33B46E"> 
+               		
+               <h3 class="section-title">Rationale</h3> 
+               		
+               <blockquote class="lq">
+                  <div> 
+                     		  
+                     <div class="p">In dita-users@yahoogroups.com, &quot;Chris Thompson&quot; &lt;thomps@...&gt;
+                        			 wrote: 
+                        		  </div> 
+                     		  
+                     <div class="p">&gt;&gt;&gt; I've seen DITA-based projects that present end-users
+                        			 with TOCs that organize topics around information types (Concepts, Tasks,
+                        			 Reference) at the top level, as opposed to organizing topics around user goals
+                        			 (e.g., Setting Up Projects, Copying Files, etc), which was the documentation
+                        			 standard before the advent of structured authoring. Organizing TOCs around
+                        			 information types separates concepts from related tasks and reference topics.
+                        			 This seems to be a major usability problem. Users don't open up help systems
+                        			 with the idea that they need to find a &quot;concept&quot; or a &quot;procedure&quot;.&lt;&lt;&lt; 
+                        		  </div> 
+                     		  
+                     <div class="p"> Perhaps they do, sometimes. I can imagine going to the help saying
+                        			 &quot;How do I ...?&quot; or &quot;What's ...?&quot;. If that's my question then structuring by
+                        			 infotype first isn't such a bad idea. But you're right, different people think
+                        			 differently about how to structure a help set. I did an experiment with the
+                        			 authors in my team, getting everyone to structure our product's help the
+                        			 &quot;right&quot; way, and there were as many structures as authors. We came to the
+                        			 conclusion that the ideas of infotype, product feature, workflow process, etc.,
+                        			 were largely orthogonal to each other, and that a single-hierarchy organization
+                        			 would never satisfy every user. How that translated to our documentation is
+                        			 that we realized the importance of each topic having a good set of related
+                        			 topic links. Of course, this is exactly what DITA reltables are for. So I don't
+                        			 know that there is &quot;a&quot; best practice as such. Each help set may have its own
+                        			 best view, and some help sets might benefit from multiple views
+                        			 (user-selectable ToCs, there's a thought). Given how the emphasis seems to be
+                        			 on using &quot;search&quot; features now for online help, perhaps the structure of a ToC
+                        			 doesn't matter that much. 
+                        		  </div> 
+                     		
+                     <p class="lq-reftitle"><a href="http://tech.groups.yahoo.com/group/dita-users/message/6699" target="_blank">Deborah Pickett, Yahoo! DITA Users Group</a></p>
+                  </div>
+               </blockquote> 
+               	 </section>
+         </div>
+      </section>
+      <hr class="footnote-separator" />
+      <table class="fn-layout">
+         <tr>
+            <td style="vertical-align: baseline;"> <sup class="fn-callout">(1)</sup></td>
+            <td class="fn" id="I_d912e38_" style="vertical-align: baseline;"><span class="ph">Miller, G. A. (1956).
+                  			 The magical number seven, plus or minus two: Some limits on our capacity for
+                  			 processing information. Psychological Review, 63(2), 81-97. 
+                  		  </span></td>
+         </tr>
+      </table>
+   </div>
+    </div>
+
+    
+  </body></html>

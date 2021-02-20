@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head><meta charset="UTF-8" />
+      
+      <title>Conditions, filtering, variants and ditaval</title>
+      <link href="resources/base.css" rel="stylesheet" type="text/css" />
+      <meta content="Many confusing terms are used to describe different parts of the conditional publishing process. Understanding the terms is key to understanding the concepts." name="description" />
+      <meta content="XMLmind DITA Converter 3.8.0" name="generator" />
+   <meta content="width=device-width, initial-scale=1" name="viewport" /><link href="_wh/wh.css" rel="stylesheet" type="text/css" /><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script><script charset="UTF-8" src="_wh/wh.js" type="text/javascript"></script><script charset="UTF-8" defer="defer" src="_wh/search.js" type="text/javascript"></script></head>
+   
+<body>
+    
+
+    <div id="wh-body">
+      <div class="wh-icon-menu" id="wh-menu"></div>
+      <div id="wh-navigation">
+        <ul id="wh-tabs">
+          <li id="wh-toc-tab"><a class="wh-icon-toc" href="#wh-toc-container"></a></li>
+          
+          <li id="wh-search-tab"><a class="wh-icon-search" href="#wh-search-container"></a></li>
+        </ul>
+        <div id="wh-toc-container">
+          <div id="wh-toc-form"><span class="wh-icon-collapse-all" id="wh-toc-collapse-all"></span><span class="wh-icon-expand-all" id="wh-toc-expand-all"></span><span class="wh-toc-spring"></span><span class="wh-icon-previous" id="wh-toc-previous"></span><span class="wh-icon-next" id="wh-toc-next"></span><span class="wh-toc-spring"></span><span class="wh-icon-print" id="wh-toc-print"></span></div>
+          <div id="wh-toc-pane">
+          </div>
+        </div>
+        
+        <div id="wh-search-container">
+          <div id="wh-search-form"><span id="wh-search-group"><span class="wh-icon-search" id="wh-do-search"></span><input id="wh-search-field" type="text" /><span class="wh-icon-cancel" id="wh-cancel-search"></span></span><span class="wh-icon-highlight" id="wh-search-highlight"></span></div>
+          <div id="wh-search-pane">
+            <div id="wh-search-results">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="wh-separator"></div>
+      <div id="wh-content">
+      
+      <section class="concept" id="concept_62DC88738DF34255844A153A04EA1981" lang="en" xml:lang="en">
+         <h2 class="section2-title" id="concept_62DC88738DF34255844A153A04EA1981____TT">Conditions, filtering, variants and ditaval</h2>
+         <p class="shortdesc">Many confusing terms are used to describe different parts of the
+            	 conditional publishing process. Understanding the terms is key to understanding
+            	 the concepts. 
+            </p>
+         <div class="conbody">
+            <div class="p">Different technologies, and different authoring tools, use the terms 
+               		<dfn class="term">conditions</dfn>, 
+               		<dfn class="term">conditional publishing</dfn>, 
+               		<dfn class="term">variables</dfn>, 
+               		<dfn class="term">variants</dfn>, 
+               		<dfn class="term">flagging</dfn>, 
+               		<dfn class="term">profiling</dfn>, and 
+               		<dfn class="term">filtering</dfn> in different ways. 
+               	 </div>
+            <div class="p">DITA has built-in features to enable some content to be excluded or
+               		highlighted during the publishing process. These features are standard metadata
+               		attributes that can be applied to most DITA elements, and a 
+               		<dfn class="term">ditaval</dfn> standard used to define how attributes are handled
+               		during publishing. 
+               	 </div>
+            <div class="p">For example, the same topic might appear in an administrator manual and
+               		a consumer manual, but some paragraphs may only apply to the administrator. If
+               		those paragraphs are identified with an 
+               		<span class="synph">audience</span> attribute of 
+               		<kbd class="userinput">administrator</kbd>, they can be conditionally excluded
+               		from the output if an 
+               		<span class="synph">exclude</span> rule is defined in the 
+               		<dfn class="term">ditaval</dfn> file used for publishing. 
+               	 </div>
+            <div class="p">In DITA, 
+               		<dfn class="term">conditional publishing</dfn> describes the process where the
+               		metadata and 
+               		<dfn class="term">ditaval</dfn> features are used together. Content identified with
+               		metadata attributes can be either 
+               		<dfn class="term">excluded</dfn> or 
+               		<dfn class="term">flagged</dfn> (highlighted in some way). Excluding content is
+               		commonly referred to as 
+               		<dfn class="term">filtering</dfn>. 
+               	 </div>
+            <div class="p">The term 
+               		<dfn class="term">variable</dfn> is sometimes used within DITA authoring teams to
+               		describe a word, phrase or block of text that is managed in one place, usually
+               		through the content reference (<dfn class="term">conref</dfn>) or key reference
+               		(<dfn class="term">keyref</dfn>) feature. The term 
+               		<dfn class="term">variants</dfn> is not so commonly used, but may refer to two or
+               		more slightly different renditions of the same source topic. 
+               	 </div>
+            <div class="p"><dfn class="term">Profiling</dfn> is sometimes used to describe the technique of
+               		filtering the content displayed in a DITA editor based on the metadata
+               		attributes. (Not many DITA editors support profiling.) 
+               	 </div>
+         </div>
+      </section>
+   </div>
+    </div>
+
+    
+  </body></html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head><meta charset="UTF-8" />
+      
+      <title>Storing relationship tables in separate, embedded ditamaps</title>
+      <link href="resources/base.css" rel="stylesheet" type="text/css" />
+      <meta content="Even for medium-sized documents, it is easy for ditamap files to become unwieldy due to the number and complexity of topic references. You should take advantage of the modular nature of DITA to store relationship tables in separate ditamaps, embedded within the main ditamap, as soon as the ditamap becomes too large." name="description" />
+      <meta content="XMLmind DITA Converter 3.8.0" name="generator" />
+   <meta content="width=device-width, initial-scale=1" name="viewport" /><link href="_wh/wh.css" rel="stylesheet" type="text/css" /><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script><script charset="UTF-8" src="_wh/wh.js" type="text/javascript"></script><script charset="UTF-8" defer="defer" src="_wh/search.js" type="text/javascript"></script></head>
+   
+<body>
+    
+
+    <div id="wh-body">
+      <div class="wh-icon-menu" id="wh-menu"></div>
+      <div id="wh-navigation">
+        <ul id="wh-tabs">
+          <li id="wh-toc-tab"><a class="wh-icon-toc" href="#wh-toc-container"></a></li>
+          
+          <li id="wh-search-tab"><a class="wh-icon-search" href="#wh-search-container"></a></li>
+        </ul>
+        <div id="wh-toc-container">
+          <div id="wh-toc-form"><span class="wh-icon-collapse-all" id="wh-toc-collapse-all"></span><span class="wh-icon-expand-all" id="wh-toc-expand-all"></span><span class="wh-toc-spring"></span><span class="wh-icon-previous" id="wh-toc-previous"></span><span class="wh-icon-next" id="wh-toc-next"></span><span class="wh-toc-spring"></span><span class="wh-icon-print" id="wh-toc-print"></span></div>
+          <div id="wh-toc-pane">
+          </div>
+        </div>
+        
+        <div id="wh-search-container">
+          <div id="wh-search-form"><span id="wh-search-group"><span class="wh-icon-search" id="wh-do-search"></span><input id="wh-search-field" type="text" /><span class="wh-icon-cancel" id="wh-cancel-search"></span></span><span class="wh-icon-highlight" id="wh-search-highlight"></span></div>
+          <div id="wh-search-pane">
+            <div id="wh-search-results">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="wh-separator"></div>
+      <div id="wh-content">
+      
+      <section class="concept" id="D9381" lang="en" xml:lang="en">
+         <h2 class="section3-title" id="D9381____TT">Storing relationship tables in separate, embedded ditamaps</h2>
+         <p class="shortdesc">Even for medium-sized documents, it is easy for ditamap files to
+            	 become unwieldy due to the number and complexity of topic references. You
+            	 should take advantage of the modular nature of DITA to store relationship
+            	 tables in separate ditamaps, embedded within the main ditamap, as soon as the
+            	 ditamap becomes too large. 
+            </p>
+         <div class="conbody">
+            <div class="p">For collections larger than around 50 topics, it is preferable to store
+               		relationship table information in a separate ditamap file, embedded (nested)
+               		within the 
+               		<dfn class="term">master ditamap</dfn> for the collection. The relationship table
+               		map should only contain reltable sections. 
+               	 </div>
+            <div class="p">For very large documents, you may choose to have multiple embedded
+               		reltable ditamaps. 
+               	 </div>
+            <section class="section" id="D9381__section_BD80257338DF4540917AA2644FC63691"> 
+               		
+               <h3 class="section-title">Rationale</h3> 
+               		
+               <blockquote class="lq">
+                  <div> 
+                     		  
+                     <div class="p">We have some DITA help systems that are 1000+ topics. The only way
+                        			 to effectively manage related links is through reltables. In larger help
+                        			 systems, we use one top level DITA map with sub-maps that correspond to
+                        			 top-level folders in the help system TOC. Since related links are typically to
+                        			 topics within the same folder, we partition the reltables into each submap to
+                        			 make them easier to manage (it's possible to include related links to topics in
+                        			 other folders, too). 
+                        		  </div> 
+                     		  
+                     <div class="p">Each time authors make significant topic updates, they know to check
+                        			 the associated map for reltable entries pertaining to those topics, to see if
+                        			 they are still valid. If they had to check other topics for possible related
+                        			 links, it would be very difficult... we'd have to maintain a separate
+                        			 spreadsheet with a mapping of all topic relations, and why do that when you
+                        			 have reltables? 
+                        		  </div> 
+                     		
+                     <p class="lq-reftitle"><a href="http://tech.groups.yahoo.com/group/dita-users/message/17077" target="_blank">Paul Masalsky, Yahoo! DITA Users Group</a></p>
+                  </div>
+               </blockquote> 
+               		
+               <blockquote class="lq">
+                  <div> You might want to consider
+                     		  multiple reltables. Take a better look at your relationships and look for
+                     		  patterns that might make this simpler. Also, you could have reltables in
+                     		  submaps thus making the management a little more &quot;manageable&quot; by component. 
+                     		
+                     <p class="lq-reftitle"><a href="http://tech.groups.yahoo.com/group/dita-users/message/17078" target="_blank">Julio Vazquez, Yahoo! DITA Users Group</a></p>
+                  </div>
+               </blockquote> 
+               	 </section>
+            <section class="section" id="D9381__section_251C7AA9DF0340B1941298714F1DD762"> 
+               		
+               <h3 class="section-title">References</h3> 
+               		
+               <div class="p"><a class="xref" href="http://dita.xml.org/improving-relationships-relationship-tables" target="_blank">Improving Relationship Tables</a> (dita.xml) 
+                  		</div> 
+               	 </section>
+         </div>
+      </section>
+   </div>
+    </div>
+
+    
+  </body></html>

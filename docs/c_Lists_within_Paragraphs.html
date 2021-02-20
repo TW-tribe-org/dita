@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head><meta charset="UTF-8" />
+      
+      <title>Lists within paragraphs</title>
+      <link href="resources/base.css" rel="stylesheet" type="text/css" />
+      <meta content="Whether a list is contained within a paragraph, or whether it occurs as a separate parallel block after the paragraph, depends on the context. If the paragraph contains a lead-in to the list, then that list is bound to the paragraph, and the list should be a child of the paragraph." name="description" />
+      <meta content="XMLmind DITA Converter 3.8.0" name="generator" />
+   <meta content="width=device-width, initial-scale=1" name="viewport" /><link href="_wh/wh.css" rel="stylesheet" type="text/css" /><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script><script charset="UTF-8" src="_wh/wh.js" type="text/javascript"></script><script charset="UTF-8" defer="defer" src="_wh/search.js" type="text/javascript"></script></head>
+   
+<body>
+    
+
+    <div id="wh-body">
+      <div class="wh-icon-menu" id="wh-menu"></div>
+      <div id="wh-navigation">
+        <ul id="wh-tabs">
+          <li id="wh-toc-tab"><a class="wh-icon-toc" href="#wh-toc-container"></a></li>
+          
+          <li id="wh-search-tab"><a class="wh-icon-search" href="#wh-search-container"></a></li>
+        </ul>
+        <div id="wh-toc-container">
+          <div id="wh-toc-form"><span class="wh-icon-collapse-all" id="wh-toc-collapse-all"></span><span class="wh-icon-expand-all" id="wh-toc-expand-all"></span><span class="wh-toc-spring"></span><span class="wh-icon-previous" id="wh-toc-previous"></span><span class="wh-icon-next" id="wh-toc-next"></span><span class="wh-toc-spring"></span><span class="wh-icon-print" id="wh-toc-print"></span></div>
+          <div id="wh-toc-pane">
+          </div>
+        </div>
+        
+        <div id="wh-search-container">
+          <div id="wh-search-form"><span id="wh-search-group"><span class="wh-icon-search" id="wh-do-search"></span><input id="wh-search-field" type="text" /><span class="wh-icon-cancel" id="wh-cancel-search"></span></span><span class="wh-icon-highlight" id="wh-search-highlight"></span></div>
+          <div id="wh-search-pane">
+            <div id="wh-search-results">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="wh-separator"></div>
+      <div id="wh-content">
+      
+      <section class="concept" id="D3781" lang="en" xml:lang="en">
+         <h2 class="section3-title" id="D3781____TT">Lists within paragraphs</h2>
+         <p class="shortdesc">Whether a list is contained within a paragraph, or whether it
+            	 occurs as a separate parallel block after the paragraph, depends on the
+            	 context. If the paragraph contains a lead-in to the list, then that list is
+            	 bound to the paragraph, and the list should be a child of the paragraph. 
+            </p>
+         <div class="conbody">
+            <div class="p">DITA permits you to use a structure for a list of items where the list
+               		exists within a paragraph element. You can alternatively create a list
+               		structure without a surrounding paragraph. In other words, both of the
+               		following are valid. 
+               	 </div>
+            <pre class="codeblock">&lt;p&gt;
+ &lt;ul&gt;
+  &lt;li&gt;Point 1&lt;/li&gt;
+  &lt;li&gt;Point 2&lt;/li&gt;
+ &lt;/ul&gt;
+&lt;/p&gt; 
+</pre>
+            <div class="p">and 
+               	 </div>
+            <pre class="codeblock">&lt;ul&gt;
+ &lt;li&gt;Point 1&lt;/li&gt;
+ &lt;li&gt;Point 2&lt;/li&gt;
+&lt;/ul&gt;</pre>
+            <div class="p">The best choice is the structure that is semantically correct, and that
+               		will depend upon the context. 
+               	 </div>
+            <div class="p">In most cases, the second option (a standalone list structure) is
+               		correct semantically, because most lists do not logically fall within a
+               		paragraph, and cannot be logically be surrounded by a paragraph. Further, if
+               		the paragraph has no content other than the list, then it is probably
+               		superfluous. 
+               	 </div>
+            <div class="p">However, in some cases, the list may logically belong within the same
+               		idea as the surrounding paragraph. In such cases, there will be text within the
+               		paragraph element before and/or after the list element. For example: 
+               	 </div>
+            <pre class="codeblock">&lt;p&gt;The four turbo-charged models are: 
+ &lt;sl&gt;
+  &lt;sli&gt;XRW&lt;/sli&gt;
+  &lt;sli&gt;XRW Super&lt;/sli&gt;
+  &lt;sli&gt;Lumberer XT&lt;/sli&gt;
+  &lt;sli&gt;Liberty GT.&lt;/sli&gt;
+ &lt;/sl&gt; 
+ &lt;/p&gt;</pre>
+            <div class="p">A more complex example is: 
+               		
+               <pre class="codeblock">&lt;p&gt;The four turbo-charged models 
+ &lt;sl&gt;
+ &lt;sli&gt;XRW&lt;/sli&gt;
+  &lt;sli&gt;XRW Super&lt;/sli&gt;
+  &lt;sli&gt;Lumberer XT&lt;/sli&gt;
+  &lt;sli&gt;Liberty GT&lt;/sli&gt;
+ &lt;/sl&gt; 
+ are the most expensive of their makes.&lt;/p&gt;</pre> 
+               	 </div>
+            <div class="p">When considering content re-use, the paragraph in the preceding example
+               		could be re-used, and would always include the list, as it is part of the same
+               		idea. The list could also be re-used without the paragraph text. But the
+               		paragraph text could not be re-used without the list. 
+               	 </div>
+            <div class="p">Some people treat lead-in sentences, or stem sentences, in the same way.
+               		
+               		<span class="ph">If a stem sentence ends with a colon, then it
+                  		  should only be re-used with the list it supports. Therefore, the stem sentence
+                  		  and the list should be in the same semantic element. 
+                  		</span> 
+               	 </div>
+            <figure class="fig" id="D3781__fig_783BDD9FF2994425A982532EC255D7D9">
+               <figcaption class="fig-title">Comparison between parallel and embedded lists</figcaption>
+               <div class="fig-contents">
+                  <div class="image-container" style="text-align: left;"><img alt="Diagram showing the difference between parallel stem sentence and list and list embedded in stem sentence paragraph" class="image" height="220" id="D3781__image_D9E4BBAB09BE4B29B9FC3CA45F5FA61B" src="img/parallel_vs_embedded_lists-3.png" width="341" /></div>
+               </div>
+            </figure>
+            <div class="note" lang="en" xml:lang="en">
+               <h5 class="note-head">Note</h5>
+               <div class="note-body">
+                  		There are some conflicting requirements when the content needs to be 
+                  		<span class="ph">localised</span>.
+                  		Including a block nested inside a paragraph, such as in the preceding examples,
+                  		will create some problems for translators. This creates a dilemma which may
+                  		eventually be solved by advancements in software tools. If you are writing for
+                  		translation, avoid including text after a nested block inside another block
+                  		element. The guidelines contained in the 
+                  		<cite class="cite">Best Practice for Leveraging Legacy Translation Memory when
+                     		  Migrating to DITA (Joseph &amp; Raya, 2007)</cite> whitepaper produced by the
+                  		OASIS DITA Translation Subcommittee should be followed when writing for
+                  		translation. 
+                  	 </div>
+            </div>
+            <section class="section" id="D3781__section_B47D99AED67C48609C8D5A4B289B784E"> 
+               		
+               <h3 class="section-title">Rationale</h3> 
+               		
+               <div class="p">There is mixed opinion on this issue on the DITA forums. One of the
+                  		  strongest views expressed varies from my own views, because I think it doesn't
+                  		  take into account the semantic binding of a stem sentence to its following
+                  		  text. The view that block items should not be used as inline items is a furphy,
+                  		  because there is not neat separation of block and inline in DITA. For example,
+                  		  a list item is a block element, but it appears within an unordered list
+                  		  element, which is a block element. A list is just that: a list. Lists can be
+                  		  inline lists, bulleted lists, or numbered lists. Whether the list is displayed
+                  		  in separate paragraphs or on the one line is a matter for processing, not for
+                  		  authoring. 
+                  		</div> 
+               		
+               <div class="p">My approach, of allowing lists within paragraphs if the context
+                  		  suggests that, is consistent with other guidelines such as 
+                  		  <a class="xref" href="file:/C:/Users/I62717/Desktop/Trainings/DITAWorkshop/Syntax_and_Markup/c_Paragraphs_within_Notes.dita#D9149">file:/C:/Users/I62717/Desktop/Trainings/DITAWorkshop/Syntax_and_Markup/c_Paragraphs_within_Notes.dita#D9149</a>
+                  		  and 
+                  		  <a class="xref" href="file:/C:/Users/I62717/Desktop/Trainings/DITAWorkshop/Syntax_and_Markup/c_Paragraphs_Inside_Tables.dita#D3760">file:/C:/Users/I62717/Desktop/Trainings/DITAWorkshop/Syntax_and_Markup/c_Paragraphs_Inside_Tables.dita#D3760</a>.
+                  		  
+                  		</div> 
+               		
+               <blockquote class="lq">
+                  <div> 
+                     		  
+                     <div class="p">The next issue (which you didn't mention) is nesting &lt;ul&gt; and
+                        			 other lists inside &lt;p&gt;, such as: 
+                        		  </div> 
+                     		  
+                     <pre class="codeblock">&lt;p&gt;Please remember to eat at least two of the 
+following every day:
+ &lt;ul&gt;
+  &lt;li&gt;apple&lt;/li&gt;
+  &lt;li&gt;orange&lt;/li&gt;
+  &lt;li&gt;lemon&lt;/li&gt;
+  &lt;li&gt;tomatoe&lt;/li&gt;
+&lt;/ul&gt;.&lt;p&gt;</pre> 
+                     		  
+                     <div class="p">Aside from the messed up output this will generate (unless you code
+                        			 intelligence in the stylesheets to insert punctuation etc) it will have
+                        			 negative translation side effects (is &lt;ul&gt; a block or inline element?) I
+                        			 think we listed &lt;ul&gt; as a block element, so it should not be used as an
+                        			 inline element. I often find users marking up as follows: 
+                        		  </div> 
+                     		  
+                     <pre class="codeblock">&lt;p&gt;In order to install Acme Pro Plus Plus, 
+your system must meet the following requirements: 
+&lt;ul&gt;
+  &lt;li&gt;Pentium 4 CPU or later&lt;/li&gt;
+  &lt;li&gt;1 GB RAM or more&lt;/li&gt;
+  &lt;li&gt;At least 350 MB free disk space&lt;/li&gt; 
+&lt;/ul&gt; 
+&lt;/p&gt;</pre> 
+                     		  
+                     <div class="p">IMO, this should be marked up as follows, with the &lt;ul&gt; being
+                        			 a following sibling of &lt;p&gt;, not a child of &lt;p&gt;: 
+                        		  </div> 
+                     		  
+                     <pre class="codeblock">&lt;p&gt;In order to install Acme Pro Plus Plus, 
+your system must meet the following requirements:&lt;/p&gt; 
+&lt;ul&gt;
+  &lt;li&gt;Pentium 4 CPU or later&lt;/li&gt;
+  &lt;li&gt;1 GB RAM or more&lt;/li&gt;
+  &lt;li&gt;At least 350 MB free disk space&lt;/li&gt; 
+&lt;/ul&gt;</pre> 
+                     		
+                     <p class="lq-reftitle"><a href="http://markmail.org/thread/kuexf4klb423jbfv" target="_blank">Gershon Joseph, OASIS DITA Technical Committee mailing list</a></p>
+                  </div>
+               </blockquote> 
+               	 </section>
+         </div>
+      </section>
+   </div>
+    </div>
+
+    
+  </body></html>
